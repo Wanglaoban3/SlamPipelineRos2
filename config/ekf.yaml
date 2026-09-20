@@ -1,0 +1,88 @@
+# robot_localization: EKF fusion + navsat GNSS fusion
+ekf_filter_node:
+    ros__parameters:
+        use_sim_time: true
+
+        frequency: 30.0
+        sensor_timeout: 0.5
+        two_d_mode: false
+        transform_time_offset: 0.0
+        transform_timeout: 0.0
+        print_diagnostics: true
+        publish_tf: false
+        publish_acceleration: false
+
+        map_frame: map
+        odom_frame: odom
+        base_link_frame: base_link
+        world_frame: odom
+
+        # FAST-LIO2 odometry (pose + velocity)
+        odom0: /Odometry
+        odom0_config: [true,  true,  true,
+                       true,  true,  true,
+                       true,  true,  true,
+                       false, false, false,
+                       false, false, false]
+        odom0_queue_size: 10
+        odom0_differential: false
+        odom0_relative: false
+
+        # wheel-like odometry from can_bus vehicle velocity (vx only)
+        odom1: /odom_wheel
+        odom1_config: [false, false, false,
+                       false, false, false,
+                       true,  false, false,
+                       false, false, false,
+                       false, false, false]
+        odom1_queue_size: 10
+        odom1_differential: false
+        odom1_relative: false
+
+        # IMU: angular rates + accelerations (absolute yaw not fused: global frame differs)
+        imu0: /imu/data
+        imu0_config: [false, false, false,
+                      false, false, false,
+                      false, false, false,
+                      true,  true,  true,
+                      true,  true,  true]
+        imu0_queue_size: 50
+        imu0_differential: false
+        imu0_relative: false
+        imu0_remove_gravitational_acceleration: true
+
+        process_noise_covariance: [0.05,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                   0.0,  0.05,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                   0.0,  0.0,  0.06,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                   0.0,  0.0,  0.0,  0.03,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                   0.0,  0.0,  0.0,  0.0,  0.03,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                   0.0,  0.0,  0.0,  0.0,  0.0,  0.06,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.025,  0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.025,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,  0.04,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.01,  0.0,  0.0,  0.0,  0.0,  0.0,
+                                   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.01,  0.0,  0.0,  0.0,  0.0,
+                                   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.02,  0.0,  0.0,  0.0,
+                                   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.01,  0.0,  0.0,
+                                   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.01,  0.0,
+                                   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.015]
+
+navsat_transform:
+    ros__parameters:
+        use_sim_time: true
+
+        frequency: 30.0
+        delay: 0.0
+        magnetic_declination_radians: 0.0
+        yaw_offset: 0.0
+        zero_altitude: false
+        broadcast_utm_transform: false
+        broadcast_utm_transform_as_parent_frame: false
+        publish_filtered_gps: true
+        use_odometry_yaw: true
+        wait_for_datum: true
+        datum: [42.36306489, -71.05259997, 0.0]
+
+        imu_topic: /imu/data
+        gps_topic: /gps/fix
+        odometry_topic: /odometry/filtered

@@ -1,0 +1,286 @@
+>>> starting fastlio + ekf + navsat
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-09-20-01-23-38-033589-DESKTOP-OHMRFI9-5375
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [5377]
+[INFO] [ekf_node-2]: process started with pid [5379]
+[INFO] [navsat_transform_node-3]: process started with pid [5381]
+[INFO] [static_transform_publisher-4]: process started with pid [5383]
+[static_transform_publisher-4] [WARN] [1789838618.104474311] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-4] [INFO] [1789838618.127659973] [base_link_to_gps]: Spinning until stopped - publishing transform
+[static_transform_publisher-4] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-4] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-4] from 'base_link' to 'gps'
+[fastlio_mapping-1] [INFO] [1789838618.254504252] [laser_mapping]: p_pre->lidar_type 2
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] ~~~~/root/ws/src/fast_lio/ file opened
+[fastlio_mapping-1] [INFO] [1789838618.267717663] [laser_mapping]: Node init finished.
+>>> recording /Odometry /odometry/filtered /odometry/gps /odom
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1789838624.615902086] [rosbag2_recorder]: Press SPACE for pausing/resuming
+[INFO] [1789838624.618512401] [rosbag2_storage]: Opened database '/root/data/rec_fusion/rec_fusion_0.db3' for READ_WRITE.
+[INFO] [1789838624.620145761] [rosbag2_recorder]: Listening for topics...
+[INFO] [1789838624.620167550] [rosbag2_recorder]: Event publisher thread: Starting
+[INFO] [1789838624.623384215] [rosbag2_recorder]: Subscribed to topic '/odometry/gps'
+[INFO] [1789838624.624533810] [rosbag2_recorder]: Subscribed to topic '/odometry/filtered'
+[INFO] [1789838624.625641495] [rosbag2_recorder]: Subscribed to topic '/Odometry'
+[INFO] [1789838624.625859872] [rosbag2_recorder]: Recording...
+[INFO] [1789838624.626238425] [rosbag2_recorder]: All requested topics are subscribed. Stopping discovery...
+>>> playing bag: /root/data/nuscenes_demo
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1789838625.615021578] [rosbag2_storage]: Opened database '/root/data/nuscenes_demo/nuscenes_demo_0.db3' for READ_ONLY.
+[INFO] [1789838625.615116780] [rosbag2_player]: Set rate to 1
+[INFO] [1789838625.637192073] [rosbag2_player]: Adding keyboard callbacks.
+[INFO] [1789838625.637231430] [rosbag2_player]: Press SPACE for Pause/Resume
+[INFO] [1789838625.637250176] [rosbag2_player]: Press CURSOR_RIGHT for Play Next Message
+[INFO] [1789838625.637265389] [rosbag2_player]: Press CURSOR_UP for Increase Rate 10%
+[INFO] [1789838625.637279620] [rosbag2_player]: Press CURSOR_DOWN for Decrease Rate 10%
+[INFO] [1789838625.637892842] [rosbag2_storage]: Opened database '/root/data/nuscenes_demo/nuscenes_demo_0.db3' for READ_ONLY.
+[navsat_transform_node-3] [INFO] [1789838625.772021933] [navsat_transform]: Datum (latitude, longitude, altitude) is (42.36, -71.05, 0.00)
+[navsat_transform_node-3] [INFO] [1789838625.772217638] [navsat_transform]: Datum UTM coordinate is (19T, 330974.89, 4692128.74)
+[navsat_transform_node-3] [INFO] [1789838625.772293702] [navsat_transform]: Corrected for magnetic declination of 0, user-specified offset of 0 and meridian convergence of -0.0241453. Transform heading factor is now -0.0241453
+[navsat_transform_node-3] [ERROR] [1789838625.805224726] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838625.870101971] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838625.968208410] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838626.099359626] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838626.197511017] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838626.295620596] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838626.393806633] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838626.491968721] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838626.590083797] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838626.688239801] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1789838626.721653218] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[navsat_transform_node-3] [ERROR] [1789838626.786346534] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838626.884591557] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838626.982639206] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838627.080777641] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838627.178926087] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] [INFO] [1789838627.215537718] [laser_mapping]: Initialize the map kdtree
+[navsat_transform_node-3] [ERROR] [1789838627.309964533] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838627.408109544] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838627.506276441] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838627.604520483] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838627.702686497] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838627.767553337] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838627.898927543] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838627.997065390] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838628.095196660] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838628.193296523] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838628.291476278] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838628.389648672] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838628.487683759] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838628.618315778] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838628.716396797] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838628.814608057] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838628.912742370] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838629.010858035] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838629.076343888] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838629.174373422] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838629.271740838] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838629.369243515] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838629.466739951] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838629.597546247] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838629.694975003] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838629.792012702] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838629.889458330] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838630.019754690] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838630.117266729] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838630.214611911] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838630.312083869] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838630.442586095] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838630.540075997] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838630.637596618] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838630.735045854] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838630.832672578] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838630.930141611] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838631.027636974] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838631.125121415] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838631.222593179] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838631.319990046] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838631.449901297] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838631.547342146] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838631.644876615] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838631.709761050] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838631.840104415] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838631.937401031] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838632.035603029] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838632.132965277] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838632.230437723] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838632.327509261] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838632.425061187] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838632.522556550] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838632.620071418] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838632.717622270] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838632.847868504] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838632.945367574] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838633.075631556] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838633.173132381] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838633.270706443] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838633.368081466] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838633.498355494] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838633.595828720] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838633.692790255] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838633.790344131] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838633.887812091] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838633.985618155] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838634.082873228] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838634.180363910] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838634.277950163] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838634.375419000] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838634.472943035] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838634.570346924] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838634.667909381] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838634.798271568] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838634.895778536] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838634.993265805] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838635.090753659] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838635.188331233] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838635.285872821] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838635.383399391] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838635.480896900] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838635.578320293] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838635.708644739] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838635.806133470] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838635.903674083] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838635.968140740] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838636.098768377] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838636.196259060] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838636.293796357] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838636.391322732] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838636.488811464] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838636.618415231] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838636.716011236] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838636.813507087] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838636.911000988] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838636.976090606] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838637.073491472] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838637.170965395] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838637.268272320] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838637.399034841] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838637.496284887] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838637.593127433] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838637.690435138] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838637.787865268] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838637.885262965] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838637.982688615] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838638.080042388] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838638.177446319] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838638.274838757] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838638.372226812] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838638.469588084] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838638.566888192] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838638.697125656] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838638.794506309] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838638.891888521] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838638.989284076] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838639.086673592] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838639.184104014] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838639.281479603] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838639.378825681] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838639.508971107] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838639.606322152] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838639.703766405] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838639.768061564] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838639.898520797] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838639.996036829] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838640.093376869] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838640.190790929] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838640.288042144] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838640.417554697] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838640.514952686] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838640.612312789] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838640.709715649] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838640.774705527] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838640.871977877] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838640.969380347] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838641.066643347] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838641.197335159] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838641.294193094] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838641.391453464] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838641.488824670] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838641.586251002] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838641.683842808] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838641.781059253] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838641.878442828] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838641.975834000] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838642.073327340] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838642.170517294] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838642.267859476] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838642.398140184] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838642.495510611] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838642.592891751] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838642.690330062] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838642.787740616] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838642.949744747] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838643.047136796] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838643.144596632] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838643.209991966] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838643.307262271] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838643.404580007] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838643.501935337] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838643.599254340] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838643.696603827] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838643.793897409] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838643.891180765] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838643.988676247] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838644.118575945] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838644.215875955] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838644.313358776] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838644.410779361] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838644.508106837] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838644.605520021] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838644.703217695] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838644.800571857] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838644.897828234] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838644.995248820] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[navsat_transform_node-3] [ERROR] [1789838645.092428450] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838645.189733595] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838645.286923993] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838645.417042125] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[navsat_transform_node-3] [ERROR] [1789838645.514185167] [navsat_transform]: Could not obtain odom -> base_link transform. Will not remove offset of navsat device from robot's origin
+[fastlio_mapping-1] Failed to find match for field 'time'.
+>>> bag done
+>>> bag done
+[INFO] [1789838656.616102143] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[INFO] [1789838656.617456049] [rosbag2_recorder]: Event publisher thread: Exiting
+[INFO] [1789838656.617587135] [rosbag2_recorder]: Recording stopped
+/root/run_fusion.sh: line 36:  5375 Killed                  FASTLIO_CONFIG=$CFG ros2 launch /mnt/h/projects/slam-pipeline-ros2/launch/odometry_fusion.launch.py
+>>> odometry/fusion stage done

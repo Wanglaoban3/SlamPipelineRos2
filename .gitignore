@@ -1,0 +1,7 @@
+# third-party upstream clones are fetched via scripts/00_clone_upstream.sh
+upstream/
+
+# local scratch
+downloads/
+*.pyc
+__pycache__/

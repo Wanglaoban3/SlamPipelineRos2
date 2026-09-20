@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>ndt_omp_ros2</name>
+  <version>0.1.0</version>
+  <description>OpenMP accelerated NDT/GICP registration (koide3/ndt_omp) ported to a ROS2-compatible ament package. Library core is ROS-free.</description>
+  <maintainer email="slam@example.com">port maintainer</maintainer>
+  <license>BSD-2-Clause</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>libpcl-all-dev</depend>
+  <depend>eigen</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

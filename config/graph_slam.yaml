@@ -1,0 +1,102 @@
+/**:
+    ros__parameters:
+        use_sim_time: true
+
+        # ---------------- prefiltering ----------------
+        points_topic: "/points_raw"
+        imu_topic: "/imu/data"
+        deskewing: true
+        scan_period: 0.05          # nuScenes HDL-32E rotates at 20Hz
+        downsample_method: "VOXELGRID"
+        downsample_resolution: 0.2
+        outlier_removal_method: "STATISTICAL"
+        statistical_mean_k: 20
+        statistical_stddev: 2.0
+        use_distance_filter: true
+        distance_near_thresh: 1.0
+        distance_far_thresh: 100.0
+        base_link_frame: "base_link"
+
+        # ---------------- odometry source ----------------
+        # FAST-LIO2 provides /Odometry (front-end); hdl_graph_slam consumes it for the pose graph
+        published_odom_topic: "/Odometry"
+        odom_frame_id: "odom"
+        robot_odom_frame_id: "robot_odom"
+        enable_robot_odometry_init_guess: false
+        keyframe_delta_trans: 0.5
+        keyframe_delta_angle: 0.1
+        keyframe_delta_time: 1.0
+        transform_thresholding: false
+        max_acceptable_trans: 2.0
+        max_acceptable_angle: 1.0
+
+        registration_method: "NDT_OMP"
+        reg_num_threads: 0
+        reg_transformation_epsilon: 0.01
+        reg_maximum_iterations: 64
+        reg_resolution: 0.75
+        reg_nn_search_method: "DIRECT7"
+
+        # ---------------- floor detection ----------------
+        tilt_deg: 0.0
+        sensor_height: 0.0          # clouds arrive in base_link: ground plane is at z ~ 0
+        height_clip_range: 1.0
+        floor_pts_thresh: 256
+        floor_normal_thresh: 15.0
+        use_normal_filtering: true
+        normal_filter_thresh: 20.0
+
+        # ---------------- hdl_graph_slam ----------------
+        map_frame_id: "map"
+        odom_frame_id: "odom"
+        map_cloud_resolution: 0.1
+        max_keyframes_per_update: 10
+        g2o_solver_type: "lm_var_cholmod"
+        g2o_solver_num_iterations: 512
+        graph_update_interval: 1.0
+        map_cloud_update_interval: 5.0
+
+        fix_first_node: false
+        fix_first_node_stddev: "1 1 1 1 1 1"
+        fix_first_node_adaptive: true
+
+        # GPS factor (NavSatFix from nuScenes can_bus RT3000)
+        enable_gps: true
+        gps_navsat_topic: "/gps/fix"
+        gps_time_offset: 0.0
+        gps_edge_stddev_xy: 3.0
+        gps_edge_stddev_z: 10.0
+        gps_edge_robust_kernel: "NONE"
+
+        # IMU factors (orientation is yaw-only in can_bus pose channel -> disable full-quat prior)
+        imu_topic: "/imu/data"
+        imu_time_offset: 0.0
+        enable_imu_orientation: false
+        enable_imu_acceleration: false
+        imu_orientation_edge_stddev: 0.5
+        imu_acceleration_edge_stddev: 3.0
+
+        # loop closure
+        distance_thresh: 5.0
+        accum_distance_thresh: 8.0
+        min_edge_interval: 5.0
+        fitness_score_max_range: 5.0
+        fitness_score_thresh: 0.5
+
+        # information matrix
+        use_const_inf_matrix: false
+        const_stddev_x: 0.5
+        const_stddev_q: 0.1
+        var_gain_a: 20.0
+        min_stddev_x: 0.1
+        max_stddev_x: 5.0
+        min_stddev_q: 0.05
+        max_stddev_q: 0.2
+
+        # keyframe insertion for the graph
+        keyframe_delta_trans: 2.0
+        keyframe_delta_angle: 2.0
+
+        # auto save on shutdown
+        auto_save_map: true
+        map_file_path: "/root/data/globalmap.pcd"

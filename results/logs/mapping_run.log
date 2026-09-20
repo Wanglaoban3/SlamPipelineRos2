@@ -1,0 +1,952 @@
+>>> starting mapping nodes
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-09-20-00-10-55-772427-DESKTOP-OHMRFI9-2621
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [2630]
+[INFO] [prefiltering_node-2]: process started with pid [2632]
+[INFO] [floor_detection_node-3]: process started with pid [2634]
+[INFO] [hdl_graph_slam_node-4]: process started with pid [2636]
+>>> recording /Odometry
+>>> playing bag: /root/data/nuscenes_demo
+[prefiltering_node-2] downsample: VOXELGRID 0.2
+[prefiltering_node-2] outlier_removal: STATISTICAL 20 - 2
+[hdl_graph_slam_node-4] construct solver: lm_var_cholmod
+[hdl_graph_slam_node-4] done
+[hdl_graph_slam_node-4] registration: NDT_OMP DIRECT7 0.75 (0 threads)
+[fastlio_mapping-1] [INFO] [1789834260.379068996] [laser_mapping]: p_pre->lidar_type 2
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] ~~~~/root/ws/src/fast_lio/ file opened
+[fastlio_mapping-1] [INFO] [1789834260.491509995] [laser_mapping]: Node init finished.
+stdin is not a terminal device. Keyboard handling disabled.stdin is not a terminal device. Keyboard handling disabled.[INFO] [1789834261.400620990] [rosbag2_recorder]: Press SPACE for pausing/resuming
+[INFO] [1789834261.599643689] [rosbag2_storage]: Opened database '/root/data/rec_mapping/rec_mapping_0.db3' for READ_WRITE.
+[INFO] [1789834261.610402089] [rosbag2_storage]: Opened database '/root/data/nuscenes_demo/nuscenes_demo_0.db3' for READ_ONLY.
+[INFO] [1789834261.610527189] [rosbag2_player]: Set rate to 1
+[INFO] [1789834261.658784589] [rosbag2_recorder]: Listening for topics...
+[INFO] [1789834261.658807889] [rosbag2_recorder]: Event publisher thread: Starting
+[INFO] [1789834261.666772089] [rosbag2_recorder]: Subscribed to topic '/Odometry'
+[INFO] [1789834261.667110189] [rosbag2_recorder]: Recording...
+[INFO] [1789834261.667711689] [rosbag2_recorder]: All requested topics are subscribed. Stopping discovery...
+[INFO] [1789834261.672899389] [rosbag2_player]: Adding keyboard callbacks.
+[INFO] [1789834261.672967489] [rosbag2_player]: Press SPACE for Pause/Resume
+[INFO] [1789834261.672987389] [rosbag2_player]: Press CURSOR_RIGHT for Play Next Message
+[INFO] [1789834261.673003289] [rosbag2_player]: Press CURSOR_UP for Increase Rate 10%
+[INFO] [1789834261.673017989] [rosbag2_player]: Press CURSOR_DOWN for Decrease Rate 10%
+[INFO] [1789834261.674331789] [rosbag2_storage]: Opened database '/root/data/nuscenes_demo/nuscenes_demo_0.db3' for READ_ONLY.
+[prefiltering_node-2] [WARN] [1789834261.687707489] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] [INFO] [1789834262.469248384] [hdl_graph_slam_node]: optimization tick #1
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1789834262.762922283] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[fastlio_mapping-1] [INFO] [1789834263.266621880] [laser_mapping]: Initialize the map kdtree
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] [INFO] [1789834264.718788872] [hdl_graph_slam_node]: sync callback #1 (odom t=1542800370.501)
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] flush_keyframe_queue - keyframes len:0
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] flush_keyframe_queue - keyframes len:1
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] [INFO] [1789834267.215289916] [hdl_graph_slam_node]: sync callback #2 (odom t=1542800372.998)
+[hdl_graph_slam_node-4] flush_keyframe_queue - keyframes len:3
+[hdl_graph_slam_node-4] 
+[hdl_graph_slam_node-4] --- pose graph optimization ---
+[hdl_graph_slam_node-4] nodes: 6   edges: 10
+[hdl_graph_slam_node-4] optimizing... init
+[hdl_graph_slam_node-4] chi2
+[hdl_graph_slam_node-4] optimize!!
+[hdl_graph_slam_node-4] iteration= 0	 chi2= 2.923486	 time= 0.00025135	 cumTime= 0.00025135	 edges= 10	 schur= 0	 lambda= 0.000172	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 1	 chi2= 2.168133	 time= 6.105e-05	 cumTime= 0.0003124	 edges= 10	 schur= 0	 lambda= 0.000057	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 2	 chi2= 1.966860	 time= 2.9791e-05	 cumTime= 0.000342191	 edges= 10	 schur= 0	 lambda= 0.000019	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 3	 chi2= 1.891282	 time= 2.7042e-05	 cumTime= 0.000369233	 edges= 10	 schur= 0	 lambda= 0.000006	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 4	 chi2= 1.861991	 time= 2.6216e-05	 cumTime= 0.000395449	 edges= 10	 schur= 0	 lambda= 0.000002	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 5	 chi2= 1.850782	 time= 3.0891e-05	 cumTime= 0.00042634	 edges= 10	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 6	 chi2= 1.846509	 time= 2.64e-05	 cumTime= 0.00045274	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 7	 chi2= 1.844882	 time= 2.585e-05	 cumTime= 0.00047859	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 8	 chi2= 1.844264	 time= 2.5392e-05	 cumTime= 0.000503982	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 9	 chi2= 1.844028	 time= 3.7491e-05	 cumTime= 0.000541473	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 10	 chi2= 1.843939	 time= 3.7583e-05	 cumTime= 0.000579056	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 11	 chi2= 1.843905	 time= 2.53e-05	 cumTime= 0.000604356	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 12	 chi2= 1.843892	 time= 2.5117e-05	 cumTime= 0.000629473	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 13	 chi2= 1.843887	 time= 3.8133e-05	 cumTime= 0.000667606	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 14	 chi2= 1.843885	 time= 3.7675e-05	 cumTime= 0.000705281	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 15	 chi2= 1.843884	 time= 3.795e-05	 cumTime= 0.000743231	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 16	 chi2= 1.843884	 time= 2.6125e-05	 cumTime= 0.000769356	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 17	 chi2= 1.843884	 time= 2.5941e-05	 cumTime= 0.000795297	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 18	 chi2= 1.843884	 time= 2.585e-05	 cumTime= 0.000821147	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 19	 chi2= 1.843884	 time= 2.5941e-05	 cumTime= 0.000847088	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 20	 chi2= 1.843884	 time= 2.585e-05	 cumTime= 0.000872938	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 21	 chi2= 1.843884	 time= 2.585e-05	 cumTime= 0.000898788	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 22	 chi2= 1.843884	 time= 2.585e-05	 cumTime= 0.000924638	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 23	 chi2= 1.843884	 time= 3.0525e-05	 cumTime= 0.000955163	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 24	 chi2= 1.843884	 time= 2.6308e-05	 cumTime= 0.000981471	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 25	 chi2= 1.843884	 time= 2.6309e-05	 cumTime= 0.00100778	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 26	 chi2= 1.843884	 time= 2.6033e-05	 cumTime= 0.00103381	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 27	 chi2= 1.843884	 time= 3.7767e-05	 cumTime= 0.00107158	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 28	 chi2= 1.843884	 time= 2.53e-05	 cumTime= 0.00109688	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 29	 chi2= 1.843884	 time= 2.64e-05	 cumTime= 0.00112328	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 30	 chi2= 1.843884	 time= 2.5483e-05	 cumTime= 0.00114876	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 31	 chi2= 1.843884	 time= 2.53e-05	 cumTime= 0.00117406	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 32	 chi2= 1.843884	 time= 2.53e-05	 cumTime= 0.00119936	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 33	 chi2= 1.843884	 time= 2.6125e-05	 cumTime= 0.00122549	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 34	 chi2= 1.843884	 time= 2.5392e-05	 cumTime= 0.00125088	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 35	 chi2= 1.843884	 time= 2.4933e-05	 cumTime= 0.00127581	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 36	 chi2= 1.843884	 time= 2.5117e-05	 cumTime= 0.00130093	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 37	 chi2= 1.843884	 time= 7.2783e-05	 cumTime= 0.00137371	 edges= 10	 schur= 0	 lambda= 0.000000	 levenbergIter= 5
+[hdl_graph_slam_node-4] done
+[hdl_graph_slam_node-4] iterations: 38 / 512
+[hdl_graph_slam_node-4] chi2: (before)5.24702e+22 -> (after)1.84388
+[hdl_graph_slam_node-4] time: 0.002[sec]
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] [INFO] [1789834268.305766569] [hdl_graph_slam_node]: optimization tick #2
+[hdl_graph_slam_node-4] flush_keyframe_queue - keyframes len:5
+[hdl_graph_slam_node-4] 
+[hdl_graph_slam_node-4] --- pose graph optimization ---
+[hdl_graph_slam_node-4] nodes: 8   edges: 16
+[hdl_graph_slam_node-4] optimizing... init
+[hdl_graph_slam_node-4] chi2
+[hdl_graph_slam_node-4] optimize!!
+[hdl_graph_slam_node-4] iteration= 0	 chi2= 2.176721	 time= 0.000142725	 cumTime= 0.000142725	 edges= 16	 schur= 0	 lambda= 0.000208	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 1	 chi2= 2.173489	 time= 4.895e-05	 cumTime= 0.000191675	 edges= 16	 schur= 0	 lambda= 0.000087	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 2	 chi2= 2.172893	 time= 4.0517e-05	 cumTime= 0.000232192	 edges= 16	 schur= 0	 lambda= 0.000058	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 3	 chi2= 2.172715	 time= 6.9117e-05	 cumTime= 0.000301309	 edges= 16	 schur= 0	 lambda= 0.000038	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 4	 chi2= 2.172661	 time= 4.2167e-05	 cumTime= 0.000343476	 edges= 16	 schur= 0	 lambda= 0.000026	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 5	 chi2= 2.172645	 time= 3.9509e-05	 cumTime= 0.000382985	 edges= 16	 schur= 0	 lambda= 0.000017	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 6	 chi2= 2.172641	 time= 3.9141e-05	 cumTime= 0.000422126	 edges= 16	 schur= 0	 lambda= 0.000011	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 7	 chi2= 2.172639	 time= 3.905e-05	 cumTime= 0.000461176	 edges= 16	 schur= 0	 lambda= 0.000008	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 8	 chi2= 2.172639	 time= 3.905e-05	 cumTime= 0.000500226	 edges= 16	 schur= 0	 lambda= 0.000005	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 9	 chi2= 2.172639	 time= 3.8958e-05	 cumTime= 0.000539184	 edges= 16	 schur= 0	 lambda= 0.000003	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 10	 chi2= 2.172638	 time= 3.8775e-05	 cumTime= 0.000577959	 edges= 16	 schur= 0	 lambda= 0.000002	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 11	 chi2= 2.172638	 time= 3.8867e-05	 cumTime= 0.000616826	 edges= 16	 schur= 0	 lambda= 0.000002	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 12	 chi2= 2.172638	 time= 5.5458e-05	 cumTime= 0.000672284	 edges= 16	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 13	 chi2= 2.172638	 time= 6.7192e-05	 cumTime= 0.000739476	 edges= 16	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 14	 chi2= 2.172638	 time= 5.5733e-05	 cumTime= 0.000795209	 edges= 16	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 15	 chi2= 2.172638	 time= 5.7292e-05	 cumTime= 0.000852501	 edges= 16	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 16	 chi2= 2.172638	 time= 4.1158e-05	 cumTime= 0.000893659	 edges= 16	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 17	 chi2= 2.172638	 time= 5.4084e-05	 cumTime= 0.000947743	 edges= 16	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 18	 chi2= 2.172638	 time= 3.96e-05	 cumTime= 0.000987343	 edges= 16	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 19	 chi2= 2.172638	 time= 5.555e-05	 cumTime= 0.00104289	 edges= 16	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 20	 chi2= 2.172638	 time= 3.9966e-05	 cumTime= 0.00108286	 edges= 16	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 21	 chi2= 2.172638	 time= 5.5092e-05	 cumTime= 0.00113795	 edges= 16	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 22	 chi2= 2.172638	 time= 4.0241e-05	 cumTime= 0.00117819	 edges= 16	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 23	 chi2= 2.172638	 time= 3.8958e-05	 cumTime= 0.00121715	 edges= 16	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 24	 chi2= 2.172638	 time= 3.8958e-05	 cumTime= 0.00125611	 edges= 16	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 25	 chi2= 2.172638	 time= 0.000101291	 cumTime= 0.0013574	 edges= 16	 schur= 0	 lambda= 0.000253	 levenbergIter= 5
+[hdl_graph_slam_node-4] done
+[hdl_graph_slam_node-4] iterations: 26 / 512
+[hdl_graph_slam_node-4] chi2: (before)5.6415e+20 -> (after)2.17264
+[hdl_graph_slam_node-4] time: 0.002[sec]
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] flush_keyframe_queue - keyframes len:7
+[hdl_graph_slam_node-4] 
+[hdl_graph_slam_node-4] --- pose graph optimization ---
+[hdl_graph_slam_node-4] nodes: 10   edges: 22
+[hdl_graph_slam_node-4] optimizing... init
+[hdl_graph_slam_node-4] chi2
+[hdl_graph_slam_node-4] optimize!!
+[hdl_graph_slam_node-4] iteration= 0	 chi2= 2.329354	 time= 0.000140708	 cumTime= 0.000140708	 edges= 22	 schur= 0	 lambda= 0.000208	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 1	 chi2= 2.327742	 time= 5.6283e-05	 cumTime= 0.000196991	 edges= 22	 schur= 0	 lambda= 0.000139	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 2	 chi2= 2.327529	 time= 5.3625e-05	 cumTime= 0.000250616	 edges= 22	 schur= 0	 lambda= 0.000092	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 3	 chi2= 2.327475	 time= 5.2983e-05	 cumTime= 0.000303599	 edges= 22	 schur= 0	 lambda= 0.000062	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 4	 chi2= 2.327462	 time= 5.2433e-05	 cumTime= 0.000356032	 edges= 22	 schur= 0	 lambda= 0.000041	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 5	 chi2= 2.327458	 time= 5.2342e-05	 cumTime= 0.000408374	 edges= 22	 schur= 0	 lambda= 0.000027	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 6	 chi2= 2.327457	 time= 5.17e-05	 cumTime= 0.000460074	 edges= 22	 schur= 0	 lambda= 0.000018	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 7	 chi2= 2.327457	 time= 5.6375e-05	 cumTime= 0.000516449	 edges= 22	 schur= 0	 lambda= 0.000012	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 8	 chi2= 2.327457	 time= 5.2708e-05	 cumTime= 0.000569157	 edges= 22	 schur= 0	 lambda= 0.000008	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 9	 chi2= 2.327457	 time= 5.1883e-05	 cumTime= 0.00062104	 edges= 22	 schur= 0	 lambda= 0.000005	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 10	 chi2= 2.327457	 time= 5.17e-05	 cumTime= 0.00067274	 edges= 22	 schur= 0	 lambda= 0.000004	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 11	 chi2= 2.327457	 time= 5.1608e-05	 cumTime= 0.000724348	 edges= 22	 schur= 0	 lambda= 0.000002	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 12	 chi2= 2.327457	 time= 5.2525e-05	 cumTime= 0.000776873	 edges= 22	 schur= 0	 lambda= 0.000002	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 13	 chi2= 2.327457	 time= 5.1883e-05	 cumTime= 0.000828756	 edges= 22	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 14	 chi2= 2.327457	 time= 5.17e-05	 cumTime= 0.000880456	 edges= 22	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 15	 chi2= 2.327457	 time= 5.9583e-05	 cumTime= 0.000940039	 edges= 22	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 16	 chi2= 2.327457	 time= 5.225e-05	 cumTime= 0.000992289	 edges= 22	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 17	 chi2= 2.327457	 time= 5.2066e-05	 cumTime= 0.00104435	 edges= 22	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 18	 chi2= 2.327457	 time= 5.1792e-05	 cumTime= 0.00109615	 edges= 22	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 19	 chi2= 2.327457	 time= 7.4159e-05	 cumTime= 0.00117031	 edges= 22	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 20	 chi2= 2.327457	 time= 5.2892e-05	 cumTime= 0.0012232	 edges= 22	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 21	 chi2= 2.327457	 time= 5.1883e-05	 cumTime= 0.00127508	 edges= 22	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 22	 chi2= 2.327457	 time= 5.1883e-05	 cumTime= 0.00132696	 edges= 22	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 23	 chi2= 2.327457	 time= 5.1608e-05	 cumTime= 0.00137857	 edges= 22	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 24	 chi2= 2.327457	 time= 9.6433e-05	 cumTime= 0.001475	 edges= 22	 schur= 0	 lambda= 0.000019	 levenbergIter= 4
+[hdl_graph_slam_node-4] done
+[hdl_graph_slam_node-4] iterations: 25 / 512
+[hdl_graph_slam_node-4] chi2: (before)4.83621e+22 -> (after)2.32746
+[hdl_graph_slam_node-4] time: 0.002[sec]
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] [INFO] [1789834269.718637178] [hdl_graph_slam_node]: sync callback #3 (odom t=1542800375.499)
+[hdl_graph_slam_node-4] flush_keyframe_queue - keyframes len:9
+[hdl_graph_slam_node-4] 
+[hdl_graph_slam_node-4] --- pose graph optimization ---
+[hdl_graph_slam_node-4] nodes: 11   edges: 27
+[hdl_graph_slam_node-4] optimizing... init
+[hdl_graph_slam_node-4] chi2
+[hdl_graph_slam_node-4] optimize!!
+[hdl_graph_slam_node-4] iteration= 0	 chi2= 2.362614	 time= 0.000156291	 cumTime= 0.000156291	 edges= 27	 schur= 0	 lambda= 0.000208	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 1	 chi2= 2.362266	 time= 6.6091e-05	 cumTime= 0.000222382	 edges= 27	 schur= 0	 lambda= 0.000139	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 2	 chi2= 2.362222	 time= 6.3616e-05	 cumTime= 0.000285998	 edges= 27	 schur= 0	 lambda= 0.000092	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 3	 chi2= 2.362212	 time= 6.325e-05	 cumTime= 0.000349248	 edges= 27	 schur= 0	 lambda= 0.000062	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 4	 chi2= 2.362210	 time= 8.1766e-05	 cumTime= 0.000431014	 edges= 27	 schur= 0	 lambda= 0.000041	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 5	 chi2= 2.362209	 time= 8.0667e-05	 cumTime= 0.000511681	 edges= 27	 schur= 0	 lambda= 0.000027	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 6	 chi2= 2.362209	 time= 6.3525e-05	 cumTime= 0.000575206	 edges= 27	 schur= 0	 lambda= 0.000018	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 7	 chi2= 2.362209	 time= 6.2425e-05	 cumTime= 0.000637631	 edges= 27	 schur= 0	 lambda= 0.000012	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 8	 chi2= 2.362209	 time= 6.2058e-05	 cumTime= 0.000699689	 edges= 27	 schur= 0	 lambda= 0.000008	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 9	 chi2= 2.362209	 time= 6.2059e-05	 cumTime= 0.000761748	 edges= 27	 schur= 0	 lambda= 0.000005	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 10	 chi2= 2.362209	 time= 6.215e-05	 cumTime= 0.000823898	 edges= 27	 schur= 0	 lambda= 0.000004	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 11	 chi2= 2.362209	 time= 6.2058e-05	 cumTime= 0.000885956	 edges= 27	 schur= 0	 lambda= 0.000002	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 12	 chi2= 2.362209	 time= 7.3333e-05	 cumTime= 0.000959289	 edges= 27	 schur= 0	 lambda= 0.000002	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 13	 chi2= 2.362209	 time= 7.37e-05	 cumTime= 0.00103299	 edges= 27	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 14	 chi2= 2.362209	 time= 6.2241e-05	 cumTime= 0.00109523	 edges= 27	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 15	 chi2= 2.362209	 time= 0.00010395	 cumTime= 0.00119918	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 16	 chi2= 2.362209	 time= 6.3342e-05	 cumTime= 0.00126252	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 17	 chi2= 2.362209	 time= 6.2242e-05	 cumTime= 0.00132476	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 18	 chi2= 2.362209	 time= 6.215e-05	 cumTime= 0.00138691	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 19	 chi2= 2.362209	 time= 6.2058e-05	 cumTime= 0.00144897	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 20	 chi2= 2.362209	 time= 6.1783e-05	 cumTime= 0.00151075	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 21	 chi2= 2.362209	 time= 6.215e-05	 cumTime= 0.0015729	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 22	 chi2= 2.362209	 time= 6.1966e-05	 cumTime= 0.00163487	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 23	 chi2= 2.362209	 time= 6.2242e-05	 cumTime= 0.00169711	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 24	 chi2= 2.362209	 time= 6.1875e-05	 cumTime= 0.00175899	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 25	 chi2= 2.362209	 time= 7.8191e-05	 cumTime= 0.00183718	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 26	 chi2= 2.362209	 time= 6.3708e-05	 cumTime= 0.00190089	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 27	 chi2= 2.362209	 time= 6.2608e-05	 cumTime= 0.00196349	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 28	 chi2= 2.362209	 time= 6.215e-05	 cumTime= 0.00202564	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 29	 chi2= 2.362209	 time= 6.1691e-05	 cumTime= 0.00208734	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 30	 chi2= 2.362209	 time= 9.2309e-05	 cumTime= 0.00217964	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 31	 chi2= 2.362209	 time= 6.4167e-05	 cumTime= 0.00224381	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 32	 chi2= 2.362209	 time= 6.1967e-05	 cumTime= 0.00230578	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 33	 chi2= 2.362209	 time= 6.215e-05	 cumTime= 0.00236793	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 34	 chi2= 2.362209	 time= 6.2059e-05	 cumTime= 0.00242999	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 35	 chi2= 2.362209	 time= 8.8642e-05	 cumTime= 0.00251863	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 36	 chi2= 2.362209	 time= 7.5533e-05	 cumTime= 0.00259416	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 37	 chi2= 2.362209	 time= 7.425e-05	 cumTime= 0.00266841	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 38	 chi2= 2.362209	 time= 7.3425e-05	 cumTime= 0.00274184	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 39	 chi2= 2.362209	 time= 6.1966e-05	 cumTime= 0.0028038	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 40	 chi2= 2.362209	 time= 6.1967e-05	 cumTime= 0.00286577	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 41	 chi2= 2.362209	 time= 6.2242e-05	 cumTime= 0.00292801	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 42	 chi2= 2.362209	 time= 6.1783e-05	 cumTime= 0.0029898	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 43	 chi2= 2.362209	 time= 6.1783e-05	 cumTime= 0.00305158	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 44	 chi2= 2.362209	 time= 6.9483e-05	 cumTime= 0.00312106	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 45	 chi2= 2.362209	 time= 7.8284e-05	 cumTime= 0.00319935	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 46	 chi2= 2.362209	 time= 6.3433e-05	 cumTime= 0.00326278	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 47	 chi2= 2.362209	 time= 8.1125e-05	 cumTime= 0.0033439	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 48	 chi2= 2.362209	 time= 6.2792e-05	 cumTime= 0.0034067	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 49	 chi2= 2.362209	 time= 6.2058e-05	 cumTime= 0.00346875	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 50	 chi2= 2.362209	 time= 7.3425e-05	 cumTime= 0.00354218	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 51	 chi2= 2.362209	 time= 6.2241e-05	 cumTime= 0.00360442	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 52	 chi2= 2.362209	 time= 6.2058e-05	 cumTime= 0.00366648	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 53	 chi2= 2.362209	 time= 6.2241e-05	 cumTime= 0.00372872	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 54	 chi2= 2.362209	 time= 6.215e-05	 cumTime= 0.00379087	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 55	 chi2= 2.362209	 time= 7.8009e-05	 cumTime= 0.00386888	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 56	 chi2= 2.362209	 time= 6.3617e-05	 cumTime= 0.00393249	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 57	 chi2= 2.362209	 time= 6.2242e-05	 cumTime= 0.00399474	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 58	 chi2= 2.362209	 time= 6.2058e-05	 cumTime= 0.00405679	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 59	 chi2= 2.362209	 time= 6.1875e-05	 cumTime= 0.00411867	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 60	 chi2= 2.362209	 time= 7.3425e-05	 cumTime= 0.00419209	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 61	 chi2= 2.362209	 time= 7.3058e-05	 cumTime= 0.00426515	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 62	 chi2= 2.362209	 time= 6.215e-05	 cumTime= 0.0043273	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 63	 chi2= 2.362209	 time= 6.215e-05	 cumTime= 0.00438945	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 64	 chi2= 2.362209	 time= 6.1966e-05	 cumTime= 0.00445142	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 65	 chi2= 2.362209	 time= 6.1783e-05	 cumTime= 0.0045132	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 66	 chi2= 2.362209	 time= 6.6e-05	 cumTime= 0.0045792	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 67	 chi2= 2.362209	 time= 6.2608e-05	 cumTime= 0.00464181	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 68	 chi2= 2.362209	 time= 6.3433e-05	 cumTime= 0.00470524	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 69	 chi2= 2.362209	 time= 9.3225e-05	 cumTime= 0.00479847	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 70	 chi2= 2.362209	 time= 6.4258e-05	 cumTime= 0.00486273	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 71	 chi2= 2.362209	 time= 6.2333e-05	 cumTime= 0.00492506	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 72	 chi2= 2.362209	 time= 6.1875e-05	 cumTime= 0.00498693	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 73	 chi2= 2.362209	 time= 8.745e-05	 cumTime= 0.00507438	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 74	 chi2= 2.362209	 time= 7.3058e-05	 cumTime= 0.00514744	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 75	 chi2= 2.362209	 time= 9.0108e-05	 cumTime= 0.00523755	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 76	 chi2= 2.362209	 time= 6.3067e-05	 cumTime= 0.00530062	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 77	 chi2= 2.362209	 time= 6.2241e-05	 cumTime= 0.00536286	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 78	 chi2= 2.362209	 time= 6.2334e-05	 cumTime= 0.00542519	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 79	 chi2= 2.362209	 time= 6.215e-05	 cumTime= 0.00548734	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 80	 chi2= 2.362209	 time= 6.2059e-05	 cumTime= 0.0055494	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 81	 chi2= 2.362209	 time= 6.2242e-05	 cumTime= 0.00561164	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 82	 chi2= 2.362209	 time= 6.2334e-05	 cumTime= 0.00567398	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 83	 chi2= 2.362209	 time= 6.2058e-05	 cumTime= 0.00573603	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 84	 chi2= 2.362209	 time= 6.1966e-05	 cumTime= 0.005798	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 85	 chi2= 2.362209	 time= 6.1875e-05	 cumTime= 0.00585988	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 86	 chi2= 2.362209	 time= 7.9934e-05	 cumTime= 0.00593981	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 87	 chi2= 2.362209	 time= 6.4258e-05	 cumTime= 0.00600407	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 88	 chi2= 2.362209	 time= 6.1966e-05	 cumTime= 0.00606603	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 89	 chi2= 2.362209	 time= 6.9117e-05	 cumTime= 0.00613515	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 90	 chi2= 2.362209	 time= 6.2792e-05	 cumTime= 0.00619794	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 91	 chi2= 2.362209	 time= 9.4233e-05	 cumTime= 0.00629218	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 92	 chi2= 2.362209	 time= 6.3525e-05	 cumTime= 0.0063557	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 93	 chi2= 2.362209	 time= 6.2516e-05	 cumTime= 0.00641822	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 94	 chi2= 2.362209	 time= 6.215e-05	 cumTime= 0.00648037	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 95	 chi2= 2.362209	 time= 7.4525e-05	 cumTime= 0.00655489	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 96	 chi2= 2.362209	 time= 6.5267e-05	 cumTime= 0.00662016	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 97	 chi2= 2.362209	 time= 6.2517e-05	 cumTime= 0.00668268	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 98	 chi2= 2.362209	 time= 6.2334e-05	 cumTime= 0.00674501	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 99	 chi2= 2.362209	 time= 6.1966e-05	 cumTime= 0.00680698	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 100	 chi2= 2.362209	 time= 6.1875e-05	 cumTime= 0.00686885	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 101	 chi2= 2.362209	 time= 6.1967e-05	 cumTime= 0.00693082	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 102	 chi2= 2.362209	 time= 6.1875e-05	 cumTime= 0.00699269	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 103	 chi2= 2.362209	 time= 6.2059e-05	 cumTime= 0.00705475	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 104	 chi2= 2.362209	 time= 6.1967e-05	 cumTime= 0.00711672	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 105	 chi2= 2.362209	 time= 6.2058e-05	 cumTime= 0.00717878	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 106	 chi2= 2.362209	 time= 6.2609e-05	 cumTime= 0.00724139	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 107	 chi2= 2.362209	 time= 8.5616e-05	 cumTime= 0.007327	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 108	 chi2= 2.362209	 time= 8.8091e-05	 cumTime= 0.00741509	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 109	 chi2= 2.362209	 time= 6.4808e-05	 cumTime= 0.0074799	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 110	 chi2= 2.362209	 time= 6.2791e-05	 cumTime= 0.00754269	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 111	 chi2= 2.362209	 time= 6.2334e-05	 cumTime= 0.00760503	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 112	 chi2= 2.362209	 time= 7.6083e-05	 cumTime= 0.00768111	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 113	 chi2= 2.362209	 time= 8.965e-05	 cumTime= 0.00777076	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 114	 chi2= 2.362209	 time= 7.9658e-05	 cumTime= 0.00785042	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 115	 chi2= 2.362209	 time= 6.3891e-05	 cumTime= 0.00791431	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 116	 chi2= 2.362209	 time= 6.2883e-05	 cumTime= 0.00797719	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 117	 chi2= 2.362209	 time= 7.92e-05	 cumTime= 0.00805639	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 118	 chi2= 2.362209	 time= 8.1216e-05	 cumTime= 0.00813761	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 2
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] iteration= 119	 chi2= 2.362209	 time= 6.2425e-05	 cumTime= 0.00820003	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 120	 chi2= 2.362209	 time= 6.215e-05	 cumTime= 0.00826218	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 121	 chi2= 2.362209	 time= 6.2609e-05	 cumTime= 0.00832479	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 122	 chi2= 2.362209	 time= 6.3433e-05	 cumTime= 0.00838822	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 123	 chi2= 2.362209	 time= 6.215e-05	 cumTime= 0.00845037	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 124	 chi2= 2.362209	 time= 6.2334e-05	 cumTime= 0.00851271	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 125	 chi2= 2.362209	 time= 6.2058e-05	 cumTime= 0.00857477	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 126	 chi2= 2.362209	 time= 6.2517e-05	 cumTime= 0.00863728	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 127	 chi2= 2.362209	 time= 7.7459e-05	 cumTime= 0.00871474	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 128	 chi2= 2.362209	 time= 6.3983e-05	 cumTime= 0.00877872	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 129	 chi2= 2.362209	 time= 6.2425e-05	 cumTime= 0.00884115	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 130	 chi2= 2.362209	 time= 6.2425e-05	 cumTime= 0.00890357	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 131	 chi2= 2.362209	 time= 7.0034e-05	 cumTime= 0.00897361	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 132	 chi2= 2.362209	 time= 6.2608e-05	 cumTime= 0.00903622	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 133	 chi2= 2.362209	 time= 6.2517e-05	 cumTime= 0.00909873	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 134	 chi2= 2.362209	 time= 6.2333e-05	 cumTime= 0.00916107	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 135	 chi2= 2.362209	 time= 6.435e-05	 cumTime= 0.00922542	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 136	 chi2= 2.362209	 time= 6.2516e-05	 cumTime= 0.00928793	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 137	 chi2= 2.362209	 time= 7.7917e-05	 cumTime= 0.00936585	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 138	 chi2= 2.362209	 time= 6.435e-05	 cumTime= 0.0094302	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 139	 chi2= 2.362209	 time= 6.2333e-05	 cumTime= 0.00949253	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 140	 chi2= 2.362209	 time= 6.2517e-05	 cumTime= 0.00955505	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 141	 chi2= 2.362209	 time= 6.2333e-05	 cumTime= 0.00961738	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 142	 chi2= 2.362209	 time= 6.2242e-05	 cumTime= 0.00967962	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 143	 chi2= 2.362209	 time= 6.1783e-05	 cumTime= 0.00974141	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 144	 chi2= 2.362209	 time= 6.2058e-05	 cumTime= 0.00980347	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 145	 chi2= 2.362209	 time= 6.1875e-05	 cumTime= 0.00986534	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 146	 chi2= 2.362209	 time= 6.2058e-05	 cumTime= 0.0099274	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 147	 chi2= 2.362209	 time= 6.2058e-05	 cumTime= 0.00998946	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 148	 chi2= 2.362209	 time= 7.9658e-05	 cumTime= 0.0100691	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 149	 chi2= 2.362209	 time= 6.3158e-05	 cumTime= 0.0101323	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 150	 chi2= 2.362209	 time= 6.2333e-05	 cumTime= 0.0101946	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 151	 chi2= 2.362209	 time= 6.1967e-05	 cumTime= 0.0102566	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 152	 chi2= 2.362209	 time= 6.2242e-05	 cumTime= 0.0103188	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 153	 chi2= 2.362209	 time= 6.2059e-05	 cumTime= 0.0103809	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 154	 chi2= 2.362209	 time= 6.2059e-05	 cumTime= 0.0104429	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 155	 chi2= 2.362209	 time= 6.2425e-05	 cumTime= 0.0105054	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 156	 chi2= 2.362209	 time= 6.2059e-05	 cumTime= 0.0105674	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 157	 chi2= 2.362209	 time= 6.2058e-05	 cumTime= 0.0106295	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 158	 chi2= 2.362209	 time= 7.5625e-05	 cumTime= 0.0107051	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 159	 chi2= 2.362209	 time= 8.0208e-05	 cumTime= 0.0107853	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 160	 chi2= 2.362209	 time= 6.3708e-05	 cumTime= 0.010849	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 161	 chi2= 2.362209	 time= 6.2425e-05	 cumTime= 0.0109114	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 162	 chi2= 2.362209	 time= 6.2608e-05	 cumTime= 0.010974	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 163	 chi2= 2.362209	 time= 6.2058e-05	 cumTime= 0.0110361	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 164	 chi2= 2.362209	 time= 6.2241e-05	 cumTime= 0.0110983	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 165	 chi2= 2.362209	 time= 6.2241e-05	 cumTime= 0.0111606	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 166	 chi2= 2.362209	 time= 6.2333e-05	 cumTime= 0.0112229	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 167	 chi2= 2.362209	 time= 6.2058e-05	 cumTime= 0.011285	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 168	 chi2= 2.362209	 time= 7.7183e-05	 cumTime= 0.0113622	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 169	 chi2= 2.362209	 time= 6.4258e-05	 cumTime= 0.0114264	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 170	 chi2= 2.362209	 time= 6.27e-05	 cumTime= 0.0114891	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 171	 chi2= 2.362208	 time= 6.2242e-05	 cumTime= 0.0115514	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 172	 chi2= 2.362208	 time= 8.965e-05	 cumTime= 0.011641	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 173	 chi2= 2.362208	 time= 6.3891e-05	 cumTime= 0.0117049	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 174	 chi2= 2.362208	 time= 6.215e-05	 cumTime= 0.0117671	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 175	 chi2= 2.362208	 time= 6.2334e-05	 cumTime= 0.0118294	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 176	 chi2= 2.362208	 time= 6.3433e-05	 cumTime= 0.0118928	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 177	 chi2= 2.362208	 time= 6.2517e-05	 cumTime= 0.0119553	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 178	 chi2= 2.362208	 time= 6.215e-05	 cumTime= 0.0120175	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 179	 chi2= 2.362208	 time= 0.000129066	 cumTime= 0.0121466	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 180	 chi2= 2.362208	 time= 7.975e-05	 cumTime= 0.0122263	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 181	 chi2= 2.362208	 time= 6.6459e-05	 cumTime= 0.0122928	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 182	 chi2= 2.362208	 time= 6.2609e-05	 cumTime= 0.0123554	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 183	 chi2= 2.362208	 time= 6.2242e-05	 cumTime= 0.0124176	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 184	 chi2= 2.362208	 time= 6.1966e-05	 cumTime= 0.0124796	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 185	 chi2= 2.362208	 time= 6.215e-05	 cumTime= 0.0125417	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 186	 chi2= 2.362208	 time= 6.2058e-05	 cumTime= 0.0126038	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 187	 chi2= 2.362208	 time= 6.2059e-05	 cumTime= 0.0126658	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 188	 chi2= 2.362208	 time= 6.215e-05	 cumTime= 0.012728	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 189	 chi2= 2.362208	 time= 8.7266e-05	 cumTime= 0.0128153	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 190	 chi2= 2.362208	 time= 6.435e-05	 cumTime= 0.0128796	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 191	 chi2= 2.362208	 time= 6.2333e-05	 cumTime= 0.0129419	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 192	 chi2= 2.362208	 time= 6.2058e-05	 cumTime= 0.013004	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 193	 chi2= 2.362208	 time= 6.2058e-05	 cumTime= 0.0130661	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 194	 chi2= 2.362208	 time= 6.1875e-05	 cumTime= 0.0131279	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 195	 chi2= 2.362208	 time= 6.1783e-05	 cumTime= 0.0131897	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 196	 chi2= 2.362208	 time= 6.1875e-05	 cumTime= 0.0132516	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 197	 chi2= 2.362208	 time= 6.1967e-05	 cumTime= 0.0133136	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 198	 chi2= 2.362208	 time= 6.1967e-05	 cumTime= 0.0133755	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 199	 chi2= 2.362208	 time= 6.2058e-05	 cumTime= 0.0134376	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 200	 chi2= 2.362208	 time= 8.9559e-05	 cumTime= 0.0135271	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 201	 chi2= 2.362208	 time= 6.3158e-05	 cumTime= 0.0135903	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 202	 chi2= 2.362208	 time= 7.0217e-05	 cumTime= 0.0136605	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 203	 chi2= 2.362208	 time= 6.8567e-05	 cumTime= 0.0137291	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 204	 chi2= 2.362208	 time= 7.2875e-05	 cumTime= 0.013802	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 205	 chi2= 2.362208	 time= 6.27e-05	 cumTime= 0.0138647	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 206	 chi2= 2.362208	 time= 6.2516e-05	 cumTime= 0.0139272	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 207	 chi2= 2.362208	 time= 7.6358e-05	 cumTime= 0.0140035	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 208	 chi2= 2.362208	 time= 7.8925e-05	 cumTime= 0.0140825	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 209	 chi2= 2.362208	 time= 6.3158e-05	 cumTime= 0.0141456	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 210	 chi2= 2.362208	 time= 0.000244383	 cumTime= 0.01439	 edges= 27	 schur= 0	 lambda= 0.000000	 levenbergIter= 10
+[hdl_graph_slam_node-4] done
+[hdl_graph_slam_node-4] iterations: 211 / 512
+[hdl_graph_slam_node-4] chi2: (before)7.56804e+21 -> (after)2.36221
+[hdl_graph_slam_node-4] time: 0.020[sec]
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] flush_keyframe_queue - keyframes len:10
+[hdl_graph_slam_node-4] 
+[hdl_graph_slam_node-4] --- pose graph optimization ---
+[hdl_graph_slam_node-4] nodes: 13   edges: 31
+[hdl_graph_slam_node-4] optimizing... init
+[hdl_graph_slam_node-4] chi2
+[hdl_graph_slam_node-4] optimize!!
+[hdl_graph_slam_node-4] iteration= 0	 chi2= 2.374825	 time= 0.000161609	 cumTime= 0.000161609	 edges= 31	 schur= 0	 lambda= 0.000263	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 1	 chi2= 2.374666	 time= 8.6809e-05	 cumTime= 0.000248418	 edges= 31	 schur= 0	 lambda= 0.000175	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 2	 chi2= 2.374663	 time= 7.26e-05	 cumTime= 0.000321018	 edges= 31	 schur= 0	 lambda= 0.000117	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 3	 chi2= 2.374662	 time= 7.1225e-05	 cumTime= 0.000392243	 edges= 31	 schur= 0	 lambda= 0.000078	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 4	 chi2= 2.374662	 time= 7.0675e-05	 cumTime= 0.000462918	 edges= 31	 schur= 0	 lambda= 0.000052	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 5	 chi2= 2.374662	 time= 7.1041e-05	 cumTime= 0.000533959	 edges= 31	 schur= 0	 lambda= 0.000035	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 6	 chi2= 2.374662	 time= 7.0675e-05	 cumTime= 0.000604634	 edges= 31	 schur= 0	 lambda= 0.000023	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 7	 chi2= 2.374662	 time= 7.0584e-05	 cumTime= 0.000675218	 edges= 31	 schur= 0	 lambda= 0.000015	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 8	 chi2= 2.374662	 time= 7.04e-05	 cumTime= 0.000745618	 edges= 31	 schur= 0	 lambda= 0.000010	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 9	 chi2= 2.374662	 time= 7.0583e-05	 cumTime= 0.000816201	 edges= 31	 schur= 0	 lambda= 0.000007	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 10	 chi2= 2.374662	 time= 7.0492e-05	 cumTime= 0.000886693	 edges= 31	 schur= 0	 lambda= 0.000005	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 11	 chi2= 2.374662	 time= 7.0675e-05	 cumTime= 0.000957368	 edges= 31	 schur= 0	 lambda= 0.000003	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 12	 chi2= 2.374662	 time= 8.2958e-05	 cumTime= 0.00104033	 edges= 31	 schur= 0	 lambda= 0.000002	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 13	 chi2= 2.374662	 time= 7.15e-05	 cumTime= 0.00111183	 edges= 31	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 14	 chi2= 2.374662	 time= 7.0767e-05	 cumTime= 0.00118259	 edges= 31	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 15	 chi2= 2.374662	 time= 7.1041e-05	 cumTime= 0.00125363	 edges= 31	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 16	 chi2= 2.374662	 time= 7.04e-05	 cumTime= 0.00132403	 edges= 31	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 17	 chi2= 2.374662	 time= 7.04e-05	 cumTime= 0.00139443	 edges= 31	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 18	 chi2= 2.374662	 time= 7.0492e-05	 cumTime= 0.00146493	 edges= 31	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 19	 chi2= 2.374662	 time= 7.0859e-05	 cumTime= 0.00153579	 edges= 31	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 20	 chi2= 2.374662	 time= 7.0217e-05	 cumTime= 0.001606	 edges= 31	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 21	 chi2= 2.374662	 time= 7.04e-05	 cumTime= 0.0016764	 edges= 31	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 22	 chi2= 2.374662	 time= 7.0492e-05	 cumTime= 0.00174689	 edges= 31	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 23	 chi2= 2.374662	 time= 0.000187183	 cumTime= 0.00193408	 edges= 31	 schur= 0	 lambda= 0.049125	 levenbergIter= 7
+[hdl_graph_slam_node-4] iteration= 24	 chi2= 2.374662	 time= 0.000128975	 cumTime= 0.00206305	 edges= 31	 schur= 0	 lambda= 50.304102	 levenbergIter= 4
+[hdl_graph_slam_node-4] done
+[hdl_graph_slam_node-4] iterations: 25 / 512
+[hdl_graph_slam_node-4] chi2: (before)5.40612e+16 -> (after)2.37466
+[hdl_graph_slam_node-4] time: 0.003[sec]
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] flush_keyframe_queue - keyframes len:12
+[hdl_graph_slam_node-4] 
+[hdl_graph_slam_node-4] --- pose graph optimization ---
+[hdl_graph_slam_node-4] nodes: 15   edges: 37
+[hdl_graph_slam_node-4] optimizing... init
+[hdl_graph_slam_node-4] chi2
+[hdl_graph_slam_node-4] optimize!!
+[hdl_graph_slam_node-4] iteration= 0	 chi2= 2.405859	 time= 0.00022935	 cumTime= 0.00022935	 edges= 37	 schur= 0	 lambda= 0.000216	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 1	 chi2= 2.405157	 time= 0.000129983	 cumTime= 0.000359333	 edges= 37	 schur= 0	 lambda= 0.000144	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 2	 chi2= 2.405153	 time= 8.8459e-05	 cumTime= 0.000447792	 edges= 37	 schur= 0	 lambda= 0.000096	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 3	 chi2= 2.405153	 time= 8.3875e-05	 cumTime= 0.000531667	 edges= 37	 schur= 0	 lambda= 0.000064	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 4	 chi2= 2.405152	 time= 9.8725e-05	 cumTime= 0.000630392	 edges= 37	 schur= 0	 lambda= 0.000043	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 5	 chi2= 2.405152	 time= 8.6258e-05	 cumTime= 0.00071665	 edges= 37	 schur= 0	 lambda= 0.000029	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 6	 chi2= 2.405152	 time= 8.36e-05	 cumTime= 0.00080025	 edges= 37	 schur= 0	 lambda= 0.000019	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 7	 chi2= 2.405152	 time= 8.3325e-05	 cumTime= 0.000883575	 edges= 37	 schur= 0	 lambda= 0.000013	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 8	 chi2= 2.405152	 time= 8.3325e-05	 cumTime= 0.0009669	 edges= 37	 schur= 0	 lambda= 0.000008	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 9	 chi2= 2.405152	 time= 8.8091e-05	 cumTime= 0.00105499	 edges= 37	 schur= 0	 lambda= 0.000006	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 10	 chi2= 2.405152	 time= 0.000104042	 cumTime= 0.00115903	 edges= 37	 schur= 0	 lambda= 0.000004	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 11	 chi2= 2.405152	 time= 0.000124942	 cumTime= 0.00128397	 edges= 37	 schur= 0	 lambda= 0.000003	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 12	 chi2= 2.405152	 time= 8.5616e-05	 cumTime= 0.00136959	 edges= 37	 schur= 0	 lambda= 0.000002	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 13	 chi2= 2.405152	 time= 8.3509e-05	 cumTime= 0.0014531	 edges= 37	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 14	 chi2= 2.405152	 time= 8.3417e-05	 cumTime= 0.00153652	 edges= 37	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 15	 chi2= 2.405152	 time= 8.36e-05	 cumTime= 0.00162012	 edges= 37	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 16	 chi2= 2.405152	 time= 0.000100191	 cumTime= 0.00172031	 edges= 37	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 17	 chi2= 2.405152	 time= 0.000268308	 cumTime= 0.00198862	 edges= 37	 schur= 0	 lambda= 15097.245611	 levenbergIter= 9
+[hdl_graph_slam_node-4] iteration= 18	 chi2= 2.405152	 time= 8.3509e-05	 cumTime= 0.00207212	 edges= 37	 schur= 0	 lambda= 10064.830408	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 19	 chi2= 2.405152	 time= 9.9275e-05	 cumTime= 0.0021714	 edges= 37	 schur= 0	 lambda= 6709.886938	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 20	 chi2= 2.405152	 time= 9.8175e-05	 cumTime= 0.00226957	 edges= 37	 schur= 0	 lambda= 4473.257959	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 21	 chi2= 2.405152	 time= 8.4334e-05	 cumTime= 0.00235391	 edges= 37	 schur= 0	 lambda= 2982.171973	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 22	 chi2= 2.405152	 time= 0.000106883	 cumTime= 0.00246079	 edges= 37	 schur= 0	 lambda= 1988.114648	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 23	 chi2= 2.405152	 time= 8.4516e-05	 cumTime= 0.00254531	 edges= 37	 schur= 0	 lambda= 1325.409766	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 24	 chi2= 2.405152	 time= 8.3416e-05	 cumTime= 0.00262872	 edges= 37	 schur= 0	 lambda= 883.606510	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 25	 chi2= 2.405152	 time= 8.3508e-05	 cumTime= 0.00271223	 edges= 37	 schur= 0	 lambda= 589.071007	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 26	 chi2= 2.405152	 time= 8.3417e-05	 cumTime= 0.00279565	 edges= 37	 schur= 0	 lambda= 392.714005	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 27	 chi2= 2.405152	 time= 8.8e-05	 cumTime= 0.00288365	 edges= 37	 schur= 0	 lambda= 261.809336	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 28	 chi2= 2.405152	 time= 8.3875e-05	 cumTime= 0.00296752	 edges= 37	 schur= 0	 lambda= 174.539558	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 29	 chi2= 2.405152	 time= 0.000117425	 cumTime= 0.00308495	 edges= 37	 schur= 0	 lambda= 116.359705	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 30	 chi2= 2.405152	 time= 8.4516e-05	 cumTime= 0.00316946	 edges= 37	 schur= 0	 lambda= 77.573137	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 31	 chi2= 2.405152	 time= 0.000100467	 cumTime= 0.00326993	 edges= 37	 schur= 0	 lambda= 51.715424	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 32	 chi2= 2.405152	 time= 8.4425e-05	 cumTime= 0.00335436	 edges= 37	 schur= 0	 lambda= 34.476950	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 33	 chi2= 2.405152	 time= 8.36e-05	 cumTime= 0.00343796	 edges= 37	 schur= 0	 lambda= 22.984633	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 34	 chi2= 2.405152	 time= 8.3417e-05	 cumTime= 0.00352137	 edges= 37	 schur= 0	 lambda= 15.323089	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 35	 chi2= 2.405152	 time= 8.3691e-05	 cumTime= 0.00360506	 edges= 37	 schur= 0	 lambda= 10.215392	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 36	 chi2= 2.405152	 time= 8.3325e-05	 cumTime= 0.00368839	 edges= 37	 schur= 0	 lambda= 6.810262	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 37	 chi2= 2.405152	 time= 8.3416e-05	 cumTime= 0.00377181	 edges= 37	 schur= 0	 lambda= 4.540174	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 38	 chi2= 2.405152	 time= 0.000244567	 cumTime= 0.00401637	 edges= 37	 schur= 0	 lambda= 812495864.023001	 levenbergIter= 8
+[hdl_graph_slam_node-4] iteration= 39	 chi2= 2.405152	 time= 8.3692e-05	 cumTime= 0.00410006	 edges= 37	 schur= 0	 lambda= 1624991728.046003	 levenbergIter= 1
+[hdl_graph_slam_node-4] done
+[hdl_graph_slam_node-4] iterations: 40 / 512
+[hdl_graph_slam_node-4] chi2: (before)2.1908e+21 -> (after)2.40515
+[hdl_graph_slam_node-4] time: 0.005[sec]
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] [INFO] [1789834272.165336272] [hdl_graph_slam_node]: sync callback #4 (odom t=1542800377.949)
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] flush_keyframe_queue - keyframes len:14
+[hdl_graph_slam_node-4] 
+[hdl_graph_slam_node-4] --- pose graph optimization ---
+[hdl_graph_slam_node-4] nodes: 17   edges: 43
+[hdl_graph_slam_node-4] optimizing... init
+[hdl_graph_slam_node-4] chi2
+[hdl_graph_slam_node-4] optimize!!
+[hdl_graph_slam_node-4] iteration= 0	 chi2= 2.516360	 time= 0.000207075	 cumTime= 0.000207075	 edges= 43	 schur= 0	 lambda= 0.000287	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 1	 chi2= 2.514576	 time= 0.000100925	 cumTime= 0.000308	 edges= 43	 schur= 0	 lambda= 0.000191	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 2	 chi2= 2.514567	 time= 9.735e-05	 cumTime= 0.00040535	 edges= 43	 schur= 0	 lambda= 0.000128	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 3	 chi2= 2.514567	 time= 9.7442e-05	 cumTime= 0.000502792	 edges= 43	 schur= 0	 lambda= 0.000085	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 4	 chi2= 2.514567	 time= 9.6984e-05	 cumTime= 0.000599776	 edges= 43	 schur= 0	 lambda= 0.000057	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 5	 chi2= 2.514567	 time= 0.0003058	 cumTime= 0.000905576	 edges= 43	 schur= 0	 lambda= 10146.609587	 levenbergIter= 8
+[hdl_graph_slam_node-4] iteration= 6	 chi2= 2.514567	 time= 9.6892e-05	 cumTime= 0.00100247	 edges= 43	 schur= 0	 lambda= 6764.406392	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 7	 chi2= 2.514567	 time= 9.6434e-05	 cumTime= 0.0010989	 edges= 43	 schur= 0	 lambda= 4509.604261	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 8	 chi2= 2.514567	 time= 9.6341e-05	 cumTime= 0.00119524	 edges= 43	 schur= 0	 lambda= 3006.402841	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 9	 chi2= 2.514567	 time= 9.6433e-05	 cumTime= 0.00129168	 edges= 43	 schur= 0	 lambda= 2004.268560	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 10	 chi2= 2.514567	 time= 9.6342e-05	 cumTime= 0.00138802	 edges= 43	 schur= 0	 lambda= 1336.179040	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 11	 chi2= 2.514567	 time= 9.6341e-05	 cumTime= 0.00148436	 edges= 43	 schur= 0	 lambda= 890.786027	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 12	 chi2= 2.514567	 time= 9.6342e-05	 cumTime= 0.0015807	 edges= 43	 schur= 0	 lambda= 593.857351	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 13	 chi2= 2.514567	 time= 9.6433e-05	 cumTime= 0.00167713	 edges= 43	 schur= 0	 lambda= 395.904901	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 14	 chi2= 2.514567	 time= 9.6434e-05	 cumTime= 0.00177357	 edges= 43	 schur= 0	 lambda= 263.936601	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 15	 chi2= 2.514567	 time= 9.6342e-05	 cumTime= 0.00186991	 edges= 43	 schur= 0	 lambda= 175.957734	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 16	 chi2= 2.514567	 time= 0.000175817	 cumTime= 0.00204573	 edges= 43	 schur= 0	 lambda= 7507.529971	 levenbergIter= 4
+[hdl_graph_slam_node-4] iteration= 17	 chi2= 2.514567	 time= 9.6709e-05	 cumTime= 0.00214244	 edges= 43	 schur= 0	 lambda= 5005.019981	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 18	 chi2= 2.514567	 time= 9.6434e-05	 cumTime= 0.00223887	 edges= 43	 schur= 0	 lambda= 3336.679987	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 19	 chi2= 2.514567	 time= 9.6342e-05	 cumTime= 0.00233521	 edges= 43	 schur= 0	 lambda= 2224.453325	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 20	 chi2= 2.514567	 time= 9.6342e-05	 cumTime= 0.00243155	 edges= 43	 schur= 0	 lambda= 1482.968883	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 21	 chi2= 2.514567	 time= 0.0001089	 cumTime= 0.00254045	 edges= 43	 schur= 0	 lambda= 988.645922	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 22	 chi2= 2.514567	 time= 0.000107525	 cumTime= 0.00264798	 edges= 43	 schur= 0	 lambda= 659.097281	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 23	 chi2= 2.514567	 time= 0.00010725	 cumTime= 0.00275523	 edges= 43	 schur= 0	 lambda= 439.398188	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 24	 chi2= 2.514567	 time= 0.000107983	 cumTime= 0.00286321	 edges= 43	 schur= 0	 lambda= 292.932125	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 25	 chi2= 2.514567	 time= 0.000100834	 cumTime= 0.00296405	 edges= 43	 schur= 0	 lambda= 195.288083	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 26	 chi2= 2.514567	 time= 9.6708e-05	 cumTime= 0.00306075	 edges= 43	 schur= 0	 lambda= 130.192056	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 27	 chi2= 2.514567	 time= 0.000104133	 cumTime= 0.00316489	 edges= 43	 schur= 0	 lambda= 86.794704	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 28	 chi2= 2.514567	 time= 9.68e-05	 cumTime= 0.00326169	 edges= 43	 schur= 0	 lambda= 57.863136	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 29	 chi2= 2.514567	 time= 9.6525e-05	 cumTime= 0.00335821	 edges= 43	 schur= 0	 lambda= 38.575424	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 30	 chi2= 2.514567	 time= 0.000135666	 cumTime= 0.00349388	 edges= 43	 schur= 0	 lambda= 25.716949	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 31	 chi2= 2.514567	 time= 9.7167e-05	 cumTime= 0.00359104	 edges= 43	 schur= 0	 lambda= 17.144633	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 32	 chi2= 2.514567	 time= 9.6433e-05	 cumTime= 0.00368748	 edges= 43	 schur= 0	 lambda= 11.429755	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 33	 chi2= 2.514567	 time= 9.6709e-05	 cumTime= 0.00378419	 edges= 43	 schur= 0	 lambda= 7.619837	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 34	 chi2= 2.514567	 time= 9.6525e-05	 cumTime= 0.00388071	 edges= 43	 schur= 0	 lambda= 5.079891	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 35	 chi2= 2.514567	 time= 9.6434e-05	 cumTime= 0.00397715	 edges= 43	 schur= 0	 lambda= 3.386594	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 36	 chi2= 2.514567	 time= 9.6617e-05	 cumTime= 0.00407376	 edges= 43	 schur= 0	 lambda= 2.257729	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 37	 chi2= 2.514567	 time= 0.000333575	 cumTime= 0.00440734	 edges= 43	 schur= 0	 lambda= 81343275243202576.000000	 levenbergIter= 10
+[hdl_graph_slam_node-4] done
+[hdl_graph_slam_node-4] iterations: 38 / 512
+[hdl_graph_slam_node-4] chi2: (before)1.76267e+24 -> (after)2.51457
+[hdl_graph_slam_node-4] time: 0.005[sec]
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] [INFO] [1789834273.841523813] [hdl_graph_slam_node]: optimization tick #3
+[hdl_graph_slam_node-4] flush_keyframe_queue - keyframes len:16
+[hdl_graph_slam_node-4] 
+[hdl_graph_slam_node-4] --- pose graph optimization ---
+[hdl_graph_slam_node-4] nodes: 19   edges: 49
+[hdl_graph_slam_node-4] optimizing... init
+[hdl_graph_slam_node-4] chi2
+[hdl_graph_slam_node-4] optimize!!
+[hdl_graph_slam_node-4] iteration= 0	 chi2= 2.801392	 time= 0.0002159	 cumTime= 0.0002159	 edges= 49	 schur= 0	 lambda= 0.000275	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 1	 chi2= 2.799478	 time= 0.0001561	 cumTime= 0.000372	 edges= 49	 schur= 0	 lambda= 0.000183	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 2	 chi2= 2.799459	 time= 0.0001226	 cumTime= 0.0004946	 edges= 49	 schur= 0	 lambda= 0.000122	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 3	 chi2= 2.799457	 time= 0.0001335	 cumTime= 0.0006281	 edges= 49	 schur= 0	 lambda= 0.000081	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 4	 chi2= 2.799456	 time= 0.0001204	 cumTime= 0.0007485	 edges= 49	 schur= 0	 lambda= 0.000054	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 5	 chi2= 2.799456	 time= 0.0001194	 cumTime= 0.0008679	 edges= 49	 schur= 0	 lambda= 0.000036	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 6	 chi2= 2.799456	 time= 0.0001191	 cumTime= 0.000987	 edges= 49	 schur= 0	 lambda= 0.000024	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 7	 chi2= 2.799456	 time= 0.000119	 cumTime= 0.001106	 edges= 49	 schur= 0	 lambda= 0.000016	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 8	 chi2= 2.799455	 time= 0.0001189	 cumTime= 0.0012249	 edges= 49	 schur= 0	 lambda= 0.000011	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 9	 chi2= 2.799455	 time= 0.0001362	 cumTime= 0.0013611	 edges= 49	 schur= 0	 lambda= 0.000007	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 10	 chi2= 2.799455	 time= 0.0001314	 cumTime= 0.0014925	 edges= 49	 schur= 0	 lambda= 0.000005	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 11	 chi2= 2.799455	 time= 0.0001311	 cumTime= 0.0016236	 edges= 49	 schur= 0	 lambda= 0.000003	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 12	 chi2= 2.799455	 time= 0.0001192	 cumTime= 0.0017428	 edges= 49	 schur= 0	 lambda= 0.000002	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 13	 chi2= 2.799455	 time= 0.0001192	 cumTime= 0.001862	 edges= 49	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 14	 chi2= 2.799455	 time= 0.0001187	 cumTime= 0.0019807	 edges= 49	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 15	 chi2= 2.799455	 time= 0.0001193	 cumTime= 0.0021	 edges= 49	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 16	 chi2= 2.799455	 time= 0.0001315	 cumTime= 0.0022315	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 17	 chi2= 2.799455	 time= 0.0001325	 cumTime= 0.002364	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 18	 chi2= 2.799455	 time= 0.0001198	 cumTime= 0.0024838	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 19	 chi2= 2.799455	 time= 0.0001194	 cumTime= 0.0026032	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 20	 chi2= 2.799455	 time= 0.0001191	 cumTime= 0.0027223	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 21	 chi2= 2.799455	 time= 0.0001195	 cumTime= 0.0028418	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 22	 chi2= 2.799455	 time= 0.0001194	 cumTime= 0.0029612	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 23	 chi2= 2.799455	 time= 0.0001315	 cumTime= 0.0030927	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 24	 chi2= 2.799455	 time= 0.0001197	 cumTime= 0.0032124	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 25	 chi2= 2.799455	 time= 0.0001194	 cumTime= 0.0033318	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 26	 chi2= 2.799455	 time= 0.000119	 cumTime= 0.0034508	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 27	 chi2= 2.799455	 time= 0.0001523	 cumTime= 0.0036031	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 28	 chi2= 2.799455	 time= 0.0002184	 cumTime= 0.0038215	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 29	 chi2= 2.799455	 time= 0.000132	 cumTime= 0.0039535	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 30	 chi2= 2.799455	 time= 0.0001201	 cumTime= 0.0040736	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 31	 chi2= 2.799455	 time= 0.0001459	 cumTime= 0.0042195	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 32	 chi2= 2.799455	 time= 0.0001194	 cumTime= 0.0043389	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 33	 chi2= 2.799455	 time= 0.0001195	 cumTime= 0.0044584	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 34	 chi2= 2.799455	 time= 0.0001192	 cumTime= 0.0045776	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 35	 chi2= 2.799455	 time= 0.0001193	 cumTime= 0.0046969	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 36	 chi2= 2.799455	 time= 0.0001194	 cumTime= 0.0048163	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 37	 chi2= 2.799455	 time= 0.0001194	 cumTime= 0.0049357	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 38	 chi2= 2.799455	 time= 0.000119	 cumTime= 0.0050547	 edges= 49	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 39	 chi2= 2.799455	 time= 0.0004703	 cumTime= 0.005525	 edges= 49	 schur= 0	 lambda= 2016191.839630	 levenbergIter= 10
+[hdl_graph_slam_node-4] done
+[hdl_graph_slam_node-4] iterations: 40 / 512
+[hdl_graph_slam_node-4] chi2: (before)3.86794e+11 -> (after)2.79945
+[hdl_graph_slam_node-4] time: 0.007[sec]
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] [INFO] [1789834274.183912412] [hdl_graph_slam_node]: sync callback #5 (odom t=1542800379.948)
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] flush_keyframe_queue - keyframes len:18
+[hdl_graph_slam_node-4] 
+[hdl_graph_slam_node-4] --- pose graph optimization ---
+[hdl_graph_slam_node-4] nodes: 21   edges: 55
+[hdl_graph_slam_node-4] optimizing... init
+[hdl_graph_slam_node-4] chi2
+[hdl_graph_slam_node-4] optimize!!
+[hdl_graph_slam_node-4] iteration= 0	 chi2= 3.089760	 time= 0.000239741	 cumTime= 0.000239741	 edges= 55	 schur= 0	 lambda= 0.000237	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 1	 chi2= 3.088353	 time= 0.000138744	 cumTime= 0.000378485	 edges= 55	 schur= 0	 lambda= 0.000158	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 2	 chi2= 3.088343	 time= 0.000161918	 cumTime= 0.000540403	 edges= 55	 schur= 0	 lambda= 0.000105	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 3	 chi2= 3.088342	 time= 0.000153013	 cumTime= 0.000693416	 edges= 55	 schur= 0	 lambda= 0.000070	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 4	 chi2= 3.088341	 time= 0.000135809	 cumTime= 0.000829225	 edges= 55	 schur= 0	 lambda= 0.000047	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 5	 chi2= 3.088341	 time= 0.000134595	 cumTime= 0.00096382	 edges= 55	 schur= 0	 lambda= 0.000031	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 6	 chi2= 3.088341	 time= 0.00041613	 cumTime= 0.00137995	 edges= 55	 schur= 0	 lambda= 5589.960478	 levenbergIter= 8
+[hdl_graph_slam_node-4] iteration= 7	 chi2= 3.088341	 time= 0.000136112	 cumTime= 0.00151606	 edges= 55	 schur= 0	 lambda= 3726.640319	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 8	 chi2= 3.088341	 time= 0.000232657	 cumTime= 0.00174872	 edges= 55	 schur= 0	 lambda= 2484.426879	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 9	 chi2= 3.088341	 time= 0.000138238	 cumTime= 0.00188696	 edges= 55	 schur= 0	 lambda= 1656.284586	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 10	 chi2= 3.088341	 time= 0.000251985	 cumTime= 0.00213894	 edges= 55	 schur= 0	 lambda= 1104.189724	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 11	 chi2= 3.088341	 time= 0.000135101	 cumTime= 0.00227404	 edges= 55	 schur= 0	 lambda= 736.126483	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 12	 chi2= 3.088341	 time= 0.000134291	 cumTime= 0.00240833	 edges= 55	 schur= 0	 lambda= 490.750988	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 13	 chi2= 3.088341	 time= 0.000134493	 cumTime= 0.00254283	 edges= 55	 schur= 0	 lambda= 327.167326	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 14	 chi2= 3.088341	 time= 0.000163234	 cumTime= 0.00270606	 edges= 55	 schur= 0	 lambda= 218.111550	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 15	 chi2= 3.088341	 time= 0.000136618	 cumTime= 0.00284268	 edges= 55	 schur= 0	 lambda= 145.407700	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 16	 chi2= 3.088341	 time= 0.000139553	 cumTime= 0.00298223	 edges= 55	 schur= 0	 lambda= 96.938467	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 17	 chi2= 3.088341	 time= 0.000317158	 cumTime= 0.00329939	 edges= 55	 schur= 0	 lambda= 2117653.121271	 levenbergIter= 6
+[hdl_graph_slam_node-4] iteration= 18	 chi2= 3.088341	 time= 0.000134494	 cumTime= 0.00343388	 edges= 55	 schur= 0	 lambda= 1411768.747514	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 19	 chi2= 3.088341	 time= 0.000134494	 cumTime= 0.00356838	 edges= 55	 schur= 0	 lambda= 941179.165009	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 20	 chi2= 3.088341	 time= 0.000158377	 cumTime= 0.00372675	 edges= 55	 schur= 0	 lambda= 627452.776673	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 21	 chi2= 3.088341	 time= 0.000149471	 cumTime= 0.00387623	 edges= 55	 schur= 0	 lambda= 418301.851115	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 22	 chi2= 3.088341	 time= 0.0001351	 cumTime= 0.00401133	 edges= 55	 schur= 0	 lambda= 278867.900744	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 23	 chi2= 3.088341	 time= 0.000133785	 cumTime= 0.00414511	 edges= 55	 schur= 0	 lambda= 185911.933829	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 24	 chi2= 3.088341	 time= 0.000134291	 cumTime= 0.0042794	 edges= 55	 schur= 0	 lambda= 123941.289219	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 25	 chi2= 3.088341	 time= 0.000134089	 cumTime= 0.00441349	 edges= 55	 schur= 0	 lambda= 82627.526146	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 26	 chi2= 3.088341	 time= 0.00015787	 cumTime= 0.00457136	 edges= 55	 schur= 0	 lambda= 55085.017431	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 27	 chi2= 3.088341	 time= 0.000135606	 cumTime= 0.00470697	 edges= 55	 schur= 0	 lambda= 36723.344954	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 28	 chi2= 3.088341	 time= 0.000134393	 cumTime= 0.00484136	 edges= 55	 schur= 0	 lambda= 24482.229969	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 29	 chi2= 3.088341	 time= 0.000133785	 cumTime= 0.00497514	 edges= 55	 schur= 0	 lambda= 16321.486646	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 30	 chi2= 3.088341	 time= 0.000134392	 cumTime= 0.00510954	 edges= 55	 schur= 0	 lambda= 10880.991097	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 31	 chi2= 3.088341	 time= 0.000138845	 cumTime= 0.00524838	 edges= 55	 schur= 0	 lambda= 7253.994065	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 32	 chi2= 3.088341	 time= 0.000159287	 cumTime= 0.00540767	 edges= 55	 schur= 0	 lambda= 4835.996043	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 33	 chi2= 3.088341	 time= 0.000134797	 cumTime= 0.00554247	 edges= 55	 schur= 0	 lambda= 3223.997362	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 34	 chi2= 3.088341	 time= 0.000258969	 cumTime= 0.00580143	 edges= 55	 schur= 0	 lambda= 2149.331575	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 35	 chi2= 3.088341	 time= 0.000207762	 cumTime= 0.0060092	 edges= 55	 schur= 0	 lambda= 1432.887717	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 36	 chi2= 3.088341	 time= 0.000135708	 cumTime= 0.0061449	 edges= 55	 schur= 0	 lambda= 955.258478	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 37	 chi2= 3.088341	 time= 0.000134494	 cumTime= 0.0062794	 edges= 55	 schur= 0	 lambda= 636.838985	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 38	 chi2= 3.088341	 time= 0.000461164	 cumTime= 0.00674056	 edges= 55	 schur= 0	 lambda= 22944542528908574720.000000	 levenbergIter= 10
+[hdl_graph_slam_node-4] done
+[hdl_graph_slam_node-4] iterations: 39 / 512
+[hdl_graph_slam_node-4] chi2: (before)2.79945 -> (after)3.08834
+[hdl_graph_slam_node-4] time: 0.008[sec]
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] flush_keyframe_queue - keyframes len:20
+[hdl_graph_slam_node-4] 
+[hdl_graph_slam_node-4] --- pose graph optimization ---
+[hdl_graph_slam_node-4] nodes: 23   edges: 61
+[hdl_graph_slam_node-4] optimizing... init
+[hdl_graph_slam_node-4] chi2
+[hdl_graph_slam_node-4] optimize!!
+[hdl_graph_slam_node-4] iteration= 0	 chi2= 3.488866	 time= 0.0002688	 cumTime= 0.0002688	 edges= 61	 schur= 0	 lambda= 0.000229	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 1	 chi2= 3.487157	 time= 0.0001694	 cumTime= 0.0004382	 edges= 61	 schur= 0	 lambda= 0.000152	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 2	 chi2= 3.487146	 time= 0.0001679	 cumTime= 0.0006061	 edges= 61	 schur= 0	 lambda= 0.000102	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 3	 chi2= 3.487145	 time= 0.0001502	 cumTime= 0.0007563	 edges= 61	 schur= 0	 lambda= 0.000068	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 4	 chi2= 3.487145	 time= 0.000148	 cumTime= 0.0009043	 edges= 61	 schur= 0	 lambda= 0.000045	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 5	 chi2= 3.487145	 time= 0.0001479	 cumTime= 0.0010522	 edges= 61	 schur= 0	 lambda= 0.000030	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 6	 chi2= 3.487145	 time= 0.0004507	 cumTime= 0.0015029	 edges= 61	 schur= 0	 lambda= 5389.343970	 levenbergIter= 8
+[hdl_graph_slam_node-4] iteration= 7	 chi2= 3.487145	 time= 0.0001495	 cumTime= 0.0016524	 edges= 61	 schur= 0	 lambda= 3592.895980	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 8	 chi2= 3.487145	 time= 0.0001475	 cumTime= 0.0017999	 edges= 61	 schur= 0	 lambda= 2395.263987	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 9	 chi2= 3.487145	 time= 0.0001478	 cumTime= 0.0019477	 edges= 61	 schur= 0	 lambda= 1596.842658	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 10	 chi2= 3.487145	 time= 0.0001474	 cumTime= 0.0020951	 edges= 61	 schur= 0	 lambda= 1064.561772	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 11	 chi2= 3.487145	 time= 0.0001475	 cumTime= 0.0022426	 edges= 61	 schur= 0	 lambda= 709.707848	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 12	 chi2= 3.487145	 time= 0.0001523	 cumTime= 0.0023949	 edges= 61	 schur= 0	 lambda= 473.138565	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 13	 chi2= 3.487145	 time= 0.0001633	 cumTime= 0.0025582	 edges= 61	 schur= 0	 lambda= 315.425710	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 14	 chi2= 3.487145	 time= 0.0001521	 cumTime= 0.0027103	 edges= 61	 schur= 0	 lambda= 210.283807	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 15	 chi2= 3.487145	 time= 0.0001662	 cumTime= 0.0028765	 edges= 61	 schur= 0	 lambda= 140.189205	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 16	 chi2= 3.487145	 time= 0.0001859	 cumTime= 0.0030624	 edges= 61	 schur= 0	 lambda= 93.459470	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 17	 chi2= 3.487145	 time= 0.0001497	 cumTime= 0.0032121	 edges= 61	 schur= 0	 lambda= 62.306313	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 18	 chi2= 3.487145	 time= 0.0001477	 cumTime= 0.0033598	 edges= 61	 schur= 0	 lambda= 41.537542	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 19	 chi2= 3.487145	 time= 0.0001473	 cumTime= 0.0035071	 edges= 61	 schur= 0	 lambda= 27.691695	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 20	 chi2= 3.487145	 time= 0.0001473	 cumTime= 0.0036544	 edges= 61	 schur= 0	 lambda= 18.461130	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 21	 chi2= 3.487145	 time= 0.0001634	 cumTime= 0.0038178	 edges= 61	 schur= 0	 lambda= 12.307420	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 22	 chi2= 3.487145	 time= 0.0001662	 cumTime= 0.003984	 edges= 61	 schur= 0	 lambda= 8.204947	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 23	 chi2= 3.487145	 time= 0.0001482	 cumTime= 0.0041322	 edges= 61	 schur= 0	 lambda= 5.469964	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 24	 chi2= 3.487145	 time= 0.0001478	 cumTime= 0.00428	 edges= 61	 schur= 0	 lambda= 3.646643	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 25	 chi2= 3.487144	 time= 0.0001473	 cumTime= 0.0044273	 edges= 61	 schur= 0	 lambda= 2.431095	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 26	 chi2= 3.487144	 time= 0.0001472	 cumTime= 0.0045745	 edges= 61	 schur= 0	 lambda= 1.620730	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 27	 chi2= 3.487144	 time= 0.000165	 cumTime= 0.0047395	 edges= 61	 schur= 0	 lambda= 1.080487	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 28	 chi2= 3.487144	 time= 0.0001491	 cumTime= 0.0048886	 edges= 61	 schur= 0	 lambda= 0.720325	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 29	 chi2= 3.487144	 time= 0.0001475	 cumTime= 0.0050361	 edges= 61	 schur= 0	 lambda= 0.480216	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 30	 chi2= 3.487144	 time= 0.0001476	 cumTime= 0.0051837	 edges= 61	 schur= 0	 lambda= 0.320144	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 31	 chi2= 3.487144	 time= 0.0001475	 cumTime= 0.0053312	 edges= 61	 schur= 0	 lambda= 0.213429	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 32	 chi2= 3.487144	 time= 0.0001472	 cumTime= 0.0054784	 edges= 61	 schur= 0	 lambda= 0.142286	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 33	 chi2= 3.487144	 time= 0.0001651	 cumTime= 0.0056435	 edges= 61	 schur= 0	 lambda= 0.094858	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 34	 chi2= 3.487144	 time= 0.0001484	 cumTime= 0.0057919	 edges= 61	 schur= 0	 lambda= 0.063238	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 35	 chi2= 3.487144	 time= 0.0001473	 cumTime= 0.0059392	 edges= 61	 schur= 0	 lambda= 0.042159	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 36	 chi2= 3.487144	 time= 0.0001474	 cumTime= 0.0060866	 edges= 61	 schur= 0	 lambda= 0.028106	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 37	 chi2= 3.487144	 time= 0.0005072	 cumTime= 0.0065938	 edges= 61	 schur= 0	 lambda= 1287617042.054726	 levenbergIter= 9
+[hdl_graph_slam_node-4] iteration= 38	 chi2= 3.487144	 time= 0.0003038	 cumTime= 0.0068976	 edges= 61	 schur= 0	 lambda= 54938327127.668320	 levenbergIter= 4
+[hdl_graph_slam_node-4] iteration= 39	 chi2= 3.487144	 time= 0.000208	 cumTime= 0.0071056	 edges= 61	 schur= 0	 lambda= 439506617021.346558	 levenbergIter= 2
+[hdl_graph_slam_node-4] done
+[hdl_graph_slam_node-4] iterations: 40 / 512
+[hdl_graph_slam_node-4] chi2: (before)636.854 -> (after)3.48714
+[hdl_graph_slam_node-4] time: 0.009[sec]
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] [INFO] [1789834276.673675982] [hdl_graph_slam_node]: sync callback #6 (odom t=1542800382.448)
+[hdl_graph_slam_node-4] flush_keyframe_queue - keyframes len:22
+[hdl_graph_slam_node-4] 
+[hdl_graph_slam_node-4] --- pose graph optimization ---
+[hdl_graph_slam_node-4] nodes: 25   edges: 67
+[hdl_graph_slam_node-4] optimizing... init
+[hdl_graph_slam_node-4] chi2
+[hdl_graph_slam_node-4] optimize!!
+[hdl_graph_slam_node-4] iteration= 0	 chi2= 4.046135	 time= 0.0002706	 cumTime= 0.0002706	 edges= 67	 schur= 0	 lambda= 0.000229	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 1	 chi2= 4.043693	 time= 0.000177	 cumTime= 0.0004476	 edges= 67	 schur= 0	 lambda= 0.000152	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 2	 chi2= 4.043673	 time= 0.0001641	 cumTime= 0.0006117	 edges= 67	 schur= 0	 lambda= 0.000102	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 3	 chi2= 4.043672	 time= 0.0001617	 cumTime= 0.0007734	 edges= 67	 schur= 0	 lambda= 0.000068	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 4	 chi2= 4.043671	 time= 0.000161	 cumTime= 0.0009344	 edges= 67	 schur= 0	 lambda= 0.000045	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 5	 chi2= 4.043671	 time= 0.0001612	 cumTime= 0.0010956	 edges= 67	 schur= 0	 lambda= 0.000030	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 6	 chi2= 4.043671	 time= 0.000178	 cumTime= 0.0012736	 edges= 67	 schur= 0	 lambda= 0.000020	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 7	 chi2= 4.043671	 time= 0.0001626	 cumTime= 0.0014362	 edges= 67	 schur= 0	 lambda= 0.000013	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 8	 chi2= 4.043671	 time= 0.0001735	 cumTime= 0.0016097	 edges= 67	 schur= 0	 lambda= 0.000009	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 9	 chi2= 4.043671	 time= 0.0001732	 cumTime= 0.0017829	 edges= 67	 schur= 0	 lambda= 0.000006	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 10	 chi2= 4.043671	 time= 0.0001608	 cumTime= 0.0019437	 edges= 67	 schur= 0	 lambda= 0.000004	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 11	 chi2= 4.043671	 time= 0.0001774	 cumTime= 0.0021211	 edges= 67	 schur= 0	 lambda= 0.000003	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 12	 chi2= 4.043671	 time= 0.0001617	 cumTime= 0.0022828	 edges= 67	 schur= 0	 lambda= 0.000002	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 13	 chi2= 4.043671	 time= 0.0001745	 cumTime= 0.0024573	 edges= 67	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 14	 chi2= 4.043671	 time= 0.0001856	 cumTime= 0.0026429	 edges= 67	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 15	 chi2= 4.043671	 time= 0.0001613	 cumTime= 0.0028042	 edges= 67	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 16	 chi2= 4.043671	 time= 0.0001607	 cumTime= 0.0029649	 edges= 67	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 17	 chi2= 4.043671	 time= 0.000556	 cumTime= 0.0035209	 edges= 67	 schur= 0	 lambda= 12543962554.416346	 levenbergIter= 10
+[hdl_graph_slam_node-4] done
+[hdl_graph_slam_node-4] iterations: 18 / 512
+[hdl_graph_slam_node-4] chi2: (before)4.21592e+19 -> (after)4.04367
+[hdl_graph_slam_node-4] time: 0.004[sec]
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] flush_keyframe_queue - keyframes len:24
+[hdl_graph_slam_node-4] 
+[hdl_graph_slam_node-4] --- pose graph optimization ---
+[hdl_graph_slam_node-4] nodes: 27   edges: 73
+[hdl_graph_slam_node-4] optimizing... init
+[hdl_graph_slam_node-4] chi2
+[hdl_graph_slam_node-4] optimize!!
+[hdl_graph_slam_node-4] iteration= 0	 chi2= 4.869826	 time= 0.0003262	 cumTime= 0.0003262	 edges= 73	 schur= 0	 lambda= 0.000236	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 1	 chi2= 4.866360	 time= 0.000181	 cumTime= 0.0005072	 edges= 73	 schur= 0	 lambda= 0.000158	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 2	 chi2= 4.866336	 time= 0.000193	 cumTime= 0.0007002	 edges= 73	 schur= 0	 lambda= 0.000105	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 3	 chi2= 4.866334	 time= 0.0001781	 cumTime= 0.0008783	 edges= 73	 schur= 0	 lambda= 0.000070	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 4	 chi2= 4.866334	 time= 0.000175	 cumTime= 0.0010533	 edges= 73	 schur= 0	 lambda= 0.000047	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 5	 chi2= 4.866334	 time= 0.0001754	 cumTime= 0.0012287	 edges= 73	 schur= 0	 lambda= 0.000031	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 6	 chi2= 4.866334	 time= 0.0001749	 cumTime= 0.0014036	 edges= 73	 schur= 0	 lambda= 0.000021	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 7	 chi2= 4.866334	 time= 0.0001946	 cumTime= 0.0015982	 edges= 73	 schur= 0	 lambda= 0.000014	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 8	 chi2= 4.866334	 time= 0.0001757	 cumTime= 0.0017739	 edges= 73	 schur= 0	 lambda= 0.000009	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 9	 chi2= 4.866334	 time= 0.0001752	 cumTime= 0.0019491	 edges= 73	 schur= 0	 lambda= 0.000006	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 10	 chi2= 4.866334	 time= 0.0002209	 cumTime= 0.00217	 edges= 73	 schur= 0	 lambda= 0.000004	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 11	 chi2= 4.866334	 time= 0.0001775	 cumTime= 0.0023475	 edges= 73	 schur= 0	 lambda= 0.000003	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 12	 chi2= 4.866334	 time= 0.000219	 cumTime= 0.0025665	 edges= 73	 schur= 0	 lambda= 0.000002	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 13	 chi2= 4.866334	 time= 0.0001759	 cumTime= 0.0027424	 edges= 73	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 14	 chi2= 4.866334	 time= 0.000175	 cumTime= 0.0029174	 edges= 73	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 15	 chi2= 4.866334	 time= 0.0001942	 cumTime= 0.0031116	 edges= 73	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 16	 chi2= 4.866334	 time= 0.0001759	 cumTime= 0.0032875	 edges= 73	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 17	 chi2= 4.866334	 time= 0.0001752	 cumTime= 0.0034627	 edges= 73	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 18	 chi2= 4.866334	 time= 0.0001873	 cumTime= 0.00365	 edges= 73	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 19	 chi2= 4.866334	 time= 0.0006255	 cumTime= 0.0042755	 edges= 73	 schur= 0	 lambda= 5765470544.248728	 levenbergIter= 10
+[hdl_graph_slam_node-4] done
+[hdl_graph_slam_node-4] iterations: 20 / 512
+[hdl_graph_slam_node-4] chi2: (before)2983.95 -> (after)4.86633
+[hdl_graph_slam_node-4] time: 0.005[sec]
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] [INFO] [1789834278.724140481] [hdl_graph_slam_node]: sync callback #7 (odom t=1542800384.448)
+[hdl_graph_slam_node-4] [INFO] [1789834278.853440481] [hdl_graph_slam_node]: optimization tick #4
+[hdl_graph_slam_node-4] flush_keyframe_queue - keyframes len:26
+[hdl_graph_slam_node-4] 
+[hdl_graph_slam_node-4] --- pose graph optimization ---
+[hdl_graph_slam_node-4] nodes: 29   edges: 79
+[hdl_graph_slam_node-4] optimizing... init
+[hdl_graph_slam_node-4] chi2
+[hdl_graph_slam_node-4] optimize!!
+[hdl_graph_slam_node-4] iteration= 0	 chi2= 6.115430	 time= 0.0003148	 cumTime= 0.0003148	 edges= 79	 schur= 0	 lambda= 0.000242	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 1	 chi2= 6.110211	 time= 0.0002112	 cumTime= 0.000526	 edges= 79	 schur= 0	 lambda= 0.000161	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 2	 chi2= 6.110168	 time= 0.0001907	 cumTime= 0.0007167	 edges= 79	 schur= 0	 lambda= 0.000107	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 3	 chi2= 6.110162	 time= 0.00019	 cumTime= 0.0009067	 edges= 79	 schur= 0	 lambda= 0.000072	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 4	 chi2= 6.110161	 time= 0.0001891	 cumTime= 0.0010958	 edges= 79	 schur= 0	 lambda= 0.000048	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 5	 chi2= 6.110161	 time= 0.0001888	 cumTime= 0.0012846	 edges= 79	 schur= 0	 lambda= 0.000032	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 6	 chi2= 6.110161	 time= 0.0001889	 cumTime= 0.0014735	 edges= 79	 schur= 0	 lambda= 0.000021	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 7	 chi2= 6.110161	 time= 0.0005482	 cumTime= 0.0020217	 edges= 79	 schur= 0	 lambda= 3794.977006	 levenbergIter= 8
+[hdl_graph_slam_node-4] iteration= 8	 chi2= 6.110161	 time= 0.0001937	 cumTime= 0.0022154	 edges= 79	 schur= 0	 lambda= 2529.984671	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 9	 chi2= 6.110161	 time= 0.0002074	 cumTime= 0.0024228	 edges= 79	 schur= 0	 lambda= 1686.656447	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 10	 chi2= 6.110161	 time= 0.0001936	 cumTime= 0.0026164	 edges= 79	 schur= 0	 lambda= 1124.437632	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 11	 chi2= 6.110161	 time= 0.0001891	 cumTime= 0.0028055	 edges= 79	 schur= 0	 lambda= 749.625088	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 12	 chi2= 6.110161	 time= 0.0002049	 cumTime= 0.0030104	 edges= 79	 schur= 0	 lambda= 499.750058	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 13	 chi2= 6.110161	 time= 0.0001892	 cumTime= 0.0031996	 edges= 79	 schur= 0	 lambda= 333.166706	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 14	 chi2= 6.110161	 time= 0.0001885	 cumTime= 0.0033881	 edges= 79	 schur= 0	 lambda= 222.111137	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 15	 chi2= 6.110161	 time= 0.0001888	 cumTime= 0.0035769	 edges= 79	 schur= 0	 lambda= 148.074091	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 16	 chi2= 6.110161	 time= 0.0001886	 cumTime= 0.0037655	 edges= 79	 schur= 0	 lambda= 98.716061	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 17	 chi2= 6.110161	 time= 0.0001892	 cumTime= 0.0039547	 edges= 79	 schur= 0	 lambda= 65.810707	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 18	 chi2= 6.110161	 time= 0.0004962	 cumTime= 0.0044509	 edges= 79	 schur= 0	 lambda= 92010037.603463	 levenbergIter= 7
+[hdl_graph_slam_node-4] iteration= 19	 chi2= 6.110161	 time= 0.0001936	 cumTime= 0.0046445	 edges= 79	 schur= 0	 lambda= 61340025.068975	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 20	 chi2= 6.110161	 time= 0.0004636	 cumTime= 0.0051081	 edges= 79	 schur= 0	 lambda= 128639356253452.093750	 levenbergIter= 6
+[hdl_graph_slam_node-4] done
+[hdl_graph_slam_node-4] iterations: 21 / 512
+[hdl_graph_slam_node-4] chi2: (before)527.465 -> (after)6.11016
+[hdl_graph_slam_node-4] time: 0.006[sec]
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] flush_keyframe_queue - keyframes len:28
+[hdl_graph_slam_node-4] 
+[hdl_graph_slam_node-4] --- pose graph optimization ---
+[hdl_graph_slam_node-4] nodes: 31   edges: 85
+[hdl_graph_slam_node-4] optimizing... init
+[hdl_graph_slam_node-4] chi2
+[hdl_graph_slam_node-4] optimize!!
+[hdl_graph_slam_node-4] iteration= 0	 chi2= 7.743512	 time= 0.0003312	 cumTime= 0.0003312	 edges= 85	 schur= 0	 lambda= 0.000264	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 1	 chi2= 7.734630	 time= 0.0002074	 cumTime= 0.0005386	 edges= 85	 schur= 0	 lambda= 0.000176	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 2	 chi2= 7.734492	 time= 0.0002051	 cumTime= 0.0007437	 edges= 85	 schur= 0	 lambda= 0.000117	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 3	 chi2= 7.734469	 time= 0.0002091	 cumTime= 0.0009528	 edges= 85	 schur= 0	 lambda= 0.000078	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 4	 chi2= 7.734464	 time= 0.0002041	 cumTime= 0.0011569	 edges= 85	 schur= 0	 lambda= 0.000052	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 5	 chi2= 7.734463	 time= 0.0002214	 cumTime= 0.0013783	 edges= 85	 schur= 0	 lambda= 0.000035	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 6	 chi2= 7.734463	 time= 0.0002041	 cumTime= 0.0015824	 edges= 85	 schur= 0	 lambda= 0.000023	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 7	 chi2= 7.734463	 time= 0.0002084	 cumTime= 0.0017908	 edges= 85	 schur= 0	 lambda= 0.000015	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 8	 chi2= 7.734463	 time= 0.0002035	 cumTime= 0.0019943	 edges= 85	 schur= 0	 lambda= 0.000010	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 9	 chi2= 7.734463	 time= 0.0002033	 cumTime= 0.0021976	 edges= 85	 schur= 0	 lambda= 0.000007	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 10	 chi2= 7.734463	 time= 0.0002188	 cumTime= 0.0024164	 edges= 85	 schur= 0	 lambda= 0.000005	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 11	 chi2= 7.734463	 time= 0.0002215	 cumTime= 0.0026379	 edges= 85	 schur= 0	 lambda= 0.000003	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 12	 chi2= 7.734463	 time= 0.0002043	 cumTime= 0.0028422	 edges= 85	 schur= 0	 lambda= 0.000002	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 13	 chi2= 7.734463	 time= 0.0002034	 cumTime= 0.0030456	 edges= 85	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 14	 chi2= 7.734463	 time= 0.0002033	 cumTime= 0.0032489	 edges= 85	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 15	 chi2= 7.734463	 time= 0.0002223	 cumTime= 0.0034712	 edges= 85	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 16	 chi2= 7.734463	 time= 0.0002044	 cumTime= 0.0036756	 edges= 85	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 17	 chi2= 7.734463	 time= 0.0007228	 cumTime= 0.0043984	 edges= 85	 schur= 0	 lambda= 14460908833.889610	 levenbergIter= 10
+[hdl_graph_slam_node-4] done
+[hdl_graph_slam_node-4] iterations: 18 / 512
+[hdl_graph_slam_node-4] chi2: (before)-nan -> (after)7.73446
+[hdl_graph_slam_node-4] time: 0.005[sec]
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] flush_keyframe_queue - keyframes len:30
+[hdl_graph_slam_node-4] 
+[hdl_graph_slam_node-4] --- pose graph optimization ---
+[hdl_graph_slam_node-4] nodes: 33   edges: 91
+[hdl_graph_slam_node-4] optimizing... init
+[hdl_graph_slam_node-4] chi2
+[hdl_graph_slam_node-4] optimize!!
+[hdl_graph_slam_node-4] iteration= 0	 chi2= 9.528383	 time= 0.0004694	 cumTime= 0.0004694	 edges= 91	 schur= 0	 lambda= 0.000264	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 1	 chi2= 9.519446	 time= 0.0003261	 cumTime= 0.0007955	 edges= 91	 schur= 0	 lambda= 0.000165	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 2	 chi2= 9.519349	 time= 0.0003519	 cumTime= 0.0011474	 edges= 91	 schur= 0	 lambda= 0.000110	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 3	 chi2= 9.519333	 time= 0.0003165	 cumTime= 0.0014639	 edges= 91	 schur= 0	 lambda= 0.000073	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 4	 chi2= 9.519329	 time= 0.0003124	 cumTime= 0.0017763	 edges= 91	 schur= 0	 lambda= 0.000049	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 5	 chi2= 9.519328	 time= 0.0002809	 cumTime= 0.0020572	 edges= 91	 schur= 0	 lambda= 0.000033	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 6	 chi2= 9.519328	 time= 0.0003811	 cumTime= 0.0024383	 edges= 91	 schur= 0	 lambda= 0.000022	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 7	 chi2= 9.519328	 time= 0.0003731	 cumTime= 0.0028114	 edges= 91	 schur= 0	 lambda= 0.000014	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 8	 chi2= 9.519328	 time= 0.0003297	 cumTime= 0.0031411	 edges= 91	 schur= 0	 lambda= 0.000010	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 9	 chi2= 9.519328	 time= 0.0003088	 cumTime= 0.0034499	 edges= 91	 schur= 0	 lambda= 0.000006	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 10	 chi2= 9.519328	 time= 0.0003433	 cumTime= 0.0037932	 edges= 91	 schur= 0	 lambda= 0.000004	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 11	 chi2= 9.519328	 time= 0.0003379	 cumTime= 0.0041311	 edges= 91	 schur= 0	 lambda= 0.000003	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 12	 chi2= 9.519328	 time= 0.0003083	 cumTime= 0.0044394	 edges= 91	 schur= 0	 lambda= 0.000002	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 13	 chi2= 9.519328	 time= 0.0003513	 cumTime= 0.0047907	 edges= 91	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 14	 chi2= 9.519328	 time= 0.0003368	 cumTime= 0.0051275	 edges= 91	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 15	 chi2= 9.519328	 time= 0.0003332	 cumTime= 0.0054607	 edges= 91	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 16	 chi2= 9.519328	 time= 0.0003537	 cumTime= 0.0058144	 edges= 91	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 17	 chi2= 9.519328	 time= 0.0002912	 cumTime= 0.0061056	 edges= 91	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 18	 chi2= 9.519328	 time= 0.0011253	 cumTime= 0.0072309	 edges= 91	 schur= 0	 lambda= 9031523393.940987	 levenbergIter= 10
+[hdl_graph_slam_node-4] done
+[hdl_graph_slam_node-4] iterations: 19 / 512
+[hdl_graph_slam_node-4] chi2: (before)5.81881e+18 -> (after)9.51933
+[hdl_graph_slam_node-4] time: 0.009[sec]
+[fastlio_mapping-1] Failed to find match for field 'time'.
+[hdl_graph_slam_node-4] [INFO] [1789834281.174633880] [hdl_graph_slam_node]: sync callback #8 (odom t=1542800386.948)
+[fastlio_mapping-1] Failed to find match for field 'time'.
+>>> bag done, waiting for graph optimization
+[hdl_graph_slam_node-4] flush_keyframe_queue - keyframes len:32
+[hdl_graph_slam_node-4] 
+[hdl_graph_slam_node-4] --- pose graph optimization ---
+[hdl_graph_slam_node-4] nodes: 35   edges: 97
+[hdl_graph_slam_node-4] optimizing... init
+[hdl_graph_slam_node-4] chi2
+[hdl_graph_slam_node-4] optimize!!
+[hdl_graph_slam_node-4] iteration= 0	 chi2= 11.986955	 time= 0.0003963	 cumTime= 0.0003963	 edges= 97	 schur= 0	 lambda= 0.000264	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 1	 chi2= 11.976438	 time= 0.0002345	 cumTime= 0.0006308	 edges= 97	 schur= 0	 lambda= 0.000117	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 2	 chi2= 11.976429	 time= 0.0002402	 cumTime= 0.000871	 edges= 97	 schur= 0	 lambda= 0.000078	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 3	 chi2= 11.976427	 time= 0.0002403	 cumTime= 0.0011113	 edges= 97	 schur= 0	 lambda= 0.000052	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 4	 chi2= 11.976427	 time= 0.0002313	 cumTime= 0.0013426	 edges= 97	 schur= 0	 lambda= 0.000035	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 5	 chi2= 11.976427	 time= 0.000231	 cumTime= 0.0015736	 edges= 97	 schur= 0	 lambda= 0.000023	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 6	 chi2= 11.976427	 time= 0.0002312	 cumTime= 0.0018048	 edges= 97	 schur= 0	 lambda= 0.000015	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 7	 chi2= 11.976427	 time= 0.0002666	 cumTime= 0.0020714	 edges= 97	 schur= 0	 lambda= 0.000010	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 8	 chi2= 11.976427	 time= 0.0002441	 cumTime= 0.0023155	 edges= 97	 schur= 0	 lambda= 0.000007	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 9	 chi2= 11.976427	 time= 0.0002671	 cumTime= 0.0025826	 edges= 97	 schur= 0	 lambda= 0.000005	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 10	 chi2= 11.976427	 time= 0.000247	 cumTime= 0.0028296	 edges= 97	 schur= 0	 lambda= 0.000003	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 11	 chi2= 11.976427	 time= 0.0002535	 cumTime= 0.0030831	 edges= 97	 schur= 0	 lambda= 0.000002	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 12	 chi2= 11.976427	 time= 0.0002343	 cumTime= 0.0033174	 edges= 97	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 13	 chi2= 11.976427	 time= 0.0002309	 cumTime= 0.0035483	 edges= 97	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 14	 chi2= 11.976427	 time= 0.0002311	 cumTime= 0.0037794	 edges= 97	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 15	 chi2= 11.976427	 time= 0.0002543	 cumTime= 0.0040337	 edges= 97	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 16	 chi2= 11.976427	 time= 0.0002428	 cumTime= 0.0042765	 edges= 97	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 17	 chi2= 11.976427	 time= 0.0002307	 cumTime= 0.0045072	 edges= 97	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 18	 chi2= 11.976427	 time= 0.0002309	 cumTime= 0.0047381	 edges= 97	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 19	 chi2= 11.976427	 time= 0.0008338	 cumTime= 0.0055719	 edges= 97	 schur= 0	 lambda= 4271694975.564828	 levenbergIter= 10
+[hdl_graph_slam_node-4] done
+[hdl_graph_slam_node-4] iterations: 20 / 512
+[hdl_graph_slam_node-4] chi2: (before)2294.97 -> (after)11.9764
+[hdl_graph_slam_node-4] time: 0.006[sec]
+[hdl_graph_slam_node-4] 
+[hdl_graph_slam_node-4] --- pose graph optimization ---
+[hdl_graph_slam_node-4] nodes: 35   edges: 101
+[hdl_graph_slam_node-4] optimizing... init
+[hdl_graph_slam_node-4] chi2
+[hdl_graph_slam_node-4] optimize!!
+[hdl_graph_slam_node-4] iteration= 0	 chi2= 15.133077	 time= 0.0005627	 cumTime= 0.0005627	 edges= 101	 schur= 0	 lambda= 0.000264	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 1	 chi2= 15.132664	 time= 0.0003529	 cumTime= 0.0009156	 edges= 101	 schur= 0	 lambda= 0.000176	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 2	 chi2= 15.132662	 time= 0.0003389	 cumTime= 0.0012545	 edges= 101	 schur= 0	 lambda= 0.000117	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 3	 chi2= 15.132661	 time= 0.0003797	 cumTime= 0.0016342	 edges= 101	 schur= 0	 lambda= 0.000078	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 4	 chi2= 15.132661	 time= 0.0003797	 cumTime= 0.0020139	 edges= 101	 schur= 0	 lambda= 0.000052	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 5	 chi2= 15.132661	 time= 0.0003772	 cumTime= 0.0023911	 edges= 101	 schur= 0	 lambda= 0.000035	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 6	 chi2= 15.132660	 time= 0.0003406	 cumTime= 0.0027317	 edges= 101	 schur= 0	 lambda= 0.000023	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 7	 chi2= 15.132660	 time= 0.0004053	 cumTime= 0.003137	 edges= 101	 schur= 0	 lambda= 0.000015	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 8	 chi2= 15.132660	 time= 0.0002801	 cumTime= 0.0034171	 edges= 101	 schur= 0	 lambda= 0.000010	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 9	 chi2= 15.132660	 time= 0.000306601	 cumTime= 0.0037237	 edges= 101	 schur= 0	 lambda= 0.000007	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 10	 chi2= 15.132660	 time= 0.0003114	 cumTime= 0.0040351	 edges= 101	 schur= 0	 lambda= 0.000005	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 11	 chi2= 15.132660	 time= 0.0003565	 cumTime= 0.0043916	 edges= 101	 schur= 0	 lambda= 0.000003	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 12	 chi2= 15.132660	 time= 0.0003191	 cumTime= 0.0047107	 edges= 101	 schur= 0	 lambda= 0.000002	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 13	 chi2= 15.132660	 time= 0.0003234	 cumTime= 0.0050341	 edges= 101	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 14	 chi2= 15.132660	 time= 0.0003747	 cumTime= 0.0054088	 edges= 101	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 15	 chi2= 15.132660	 time= 0.0003688	 cumTime= 0.0057776	 edges= 101	 schur= 0	 lambda= 0.000001	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 16	 chi2= 15.132660	 time= 0.0003482	 cumTime= 0.0061258	 edges= 101	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 17	 chi2= 15.132660	 time= 0.0003464	 cumTime= 0.0064722	 edges= 101	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 18	 chi2= 15.132660	 time= 0.0003962	 cumTime= 0.0068684	 edges= 101	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 19	 chi2= 15.132660	 time= 0.0003097	 cumTime= 0.0071781	 edges= 101	 schur= 0	 lambda= 0.000000	 levenbergIter= 1
+[hdl_graph_slam_node-4] iteration= 20	 chi2= 15.132660	 time= 0.0011559	 cumTime= 0.008334	 edges= 101	 schur= 0	 lambda= 2794443.386790	 levenbergIter= 10
+[hdl_graph_slam_node-4] done
+[hdl_graph_slam_node-4] iterations: 21 / 512
+[hdl_graph_slam_node-4] chi2: (before)534.57 -> (after)15.1327
+[hdl_graph_slam_node-4] time: 0.010[sec]
+>>> saving map via service
+requester: making request: hdl_graph_slam_ros2.srv.SaveMap_Request(utm=False, resolution=0.1, destination='/root/data/globalmap.pcd')
+
+response:
+hdl_graph_slam_ros2.srv.SaveMap_Response(success=True)
+
+>>> stopping
+[INFO] [1789834311.996558375] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[INFO] [1789834311.997912575] [rosbag2_recorder]: Event publisher thread: Exiting
+[INFO] [1789834311.998053375] [rosbag2_recorder]: Recording stopped
+[fastlio_mapping-1] [INFO] [1789836128.184521989] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+>>> mapping stage done
+-rw-r--r-- 1 root root 6200798 Sep 20 00:11 /root/data/globalmap.pcd
+>>> mapping stage done
+-rw-r--r-- 1 root root 6200798 Sep 20 00:11 /root/data/globalmap.pcd
