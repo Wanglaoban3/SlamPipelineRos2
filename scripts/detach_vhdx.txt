@@ -1,3 +1,0 @@
-select vdisk file="H:\WSL\slam-ros2\ext4.vhdx"
-detail vdisk
-detach vdisk
