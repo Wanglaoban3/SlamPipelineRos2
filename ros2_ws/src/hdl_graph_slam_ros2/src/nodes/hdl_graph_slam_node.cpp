@@ -24,9 +24,6 @@
 #include <pcl/io/pcd_io.h>
 
 #include <rclcpp/rclcpp.hpp>
-#include <message_filters/subscriber.h>
-#include <message_filters/time_synchronizer.h>
-#include <message_filters/sync_policies/approximate_time.h>
 #include <tf2_ros/transform_listener.h>
 
 #include <nav_msgs/msg/odometry.hpp>
@@ -67,8 +64,6 @@ namespace hdl_graph_slam {
 class HdlGraphSlamNode : public rclcpp::Node {
 public:
   typedef pcl::PointXYZI PointT;
-  typedef message_filters::sync_policies::ApproximateTime<nav_msgs::msg::Odometry, sensor_msgs::msg::PointCloud2> ApproxSyncPolicy;
-
   HdlGraphSlamNode() : Node("hdl_graph_slam_node") {
     // init parameters
     published_odom_topic = param_or<std::string>(this, "published_odom_topic", "/odom");
@@ -151,12 +146,40 @@ public:
 
 private:
   /**
-   * @brief received point clouds are pushed to #keyframe_queue
-   * @param odom_msg
-   * @param cloud_msg
+   * @brief received point clouds are paired with the nearest buffered odometry and pushed to #keyframe_queue.
+   * Plain subscriptions + nearest-time pairing replace message_filters: robust to DDS arrival-order races.
    */
-  void cloud_callback(const nav_msgs::msg::Odometry::ConstSharedPtr& odom_msg, const sensor_msgs::msg::PointCloud2::ConstSharedPtr& cloud_msg) {
+  void odom_callback(const nav_msgs::msg::Odometry::ConstSharedPtr& odom_msg) {
+    static int odom_count = 0;
+    RCLCPP_INFO_THROTTLE(get_logger(), *get_clock(), 5000, "odom recv #%d", ++odom_count);
+    std::lock_guard<std::mutex> lock(odom_buffer_mutex);
+    double t = rclcpp::Time(odom_msg->header.stamp).seconds();
+    odom_buffer.push_back({t, odom_msg});
+    if(odom_buffer.size() > 64) {
+      odom_buffer.pop_front();
+    }
+  }
+
+  void cloud_callback(const sensor_msgs::msg::PointCloud2::ConstSharedPtr& cloud_msg) {
     static int sync_count = 0;
+    const double stamp_s = rclcpp::Time(cloud_msg->header.stamp).seconds();
+
+    double best_dt = 1e9;
+    nav_msgs::msg::Odometry::ConstSharedPtr odom_msg;
+    {
+      std::lock_guard<std::mutex> lock(odom_buffer_mutex);
+      for(const auto& entry : odom_buffer) {
+        double dt = std::abs(entry.first - stamp_s);
+        if(dt < best_dt) {
+          best_dt = dt;
+          odom_msg = entry.second;
+        }
+      }
+    }
+    if(!odom_msg || best_dt > 0.2) {
+      RCLCPP_INFO_THROTTLE(get_logger(), *get_clock(), 5000, "cloud dropped: have_odom=%d best_dt=%.3f", odom_msg != nullptr, best_dt);
+      return;
+    }
     RCLCPP_INFO_THROTTLE(get_logger(), *get_clock(), 2000, "sync callback #%d (odom t=%.3f)", ++sync_count, rclcpp::Time(odom_msg->header.stamp).seconds());
     const rclcpp::Time stamp(cloud_msg->header.stamp);
     Eigen::Isometry3d odom = odom2isometry(odom_msg);
@@ -767,19 +790,20 @@ private:
 public:
   // must be called after the node is owned by a shared_ptr
   void init() {
-    odom_sub.reset(new message_filters::Subscriber<nav_msgs::msg::Odometry>(shared_from_this(), published_odom_topic));
-    cloud_sub.reset(new message_filters::Subscriber<sensor_msgs::msg::PointCloud2>(shared_from_this(), "/filtered_points"));
-    sync.reset(new message_filters::Synchronizer<ApproxSyncPolicy>(ApproxSyncPolicy(32), *odom_sub, *cloud_sub));
-    sync->registerCallback(std::bind(&HdlGraphSlamNode::cloud_callback, this, std::placeholders::_1, std::placeholders::_2));
+    RCLCPP_INFO(get_logger(), "subscribing odometry topic: %s (must match the odometry source!)", published_odom_topic.c_str());
+    odom_sub = create_subscription<nav_msgs::msg::Odometry>(published_odom_topic, rclcpp::QoS(256), std::bind(&HdlGraphSlamNode::odom_callback, this, std::placeholders::_1));
+    cloud_sub = create_subscription<sensor_msgs::msg::PointCloud2>("/filtered_points", rclcpp::QoS(64).best_effort(), std::bind(&HdlGraphSlamNode::cloud_callback, this, std::placeholders::_1));
   }
 
 private:
   rclcpp::TimerBase::SharedPtr optimization_timer;
   rclcpp::TimerBase::SharedPtr map_publish_timer;
 
-  std::unique_ptr<message_filters::Subscriber<nav_msgs::msg::Odometry>> odom_sub;
-  std::unique_ptr<message_filters::Subscriber<sensor_msgs::msg::PointCloud2>> cloud_sub;
-  std::unique_ptr<message_filters::Synchronizer<ApproxSyncPolicy>> sync;
+  rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub;
+  rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr cloud_sub;
+
+  std::mutex odom_buffer_mutex;
+  std::deque<std::pair<double, nav_msgs::msg::Odometry::ConstSharedPtr>> odom_buffer;
 
   rclcpp::Subscription<sensor_msgs::msg::NavSatFix>::SharedPtr navsat_sub;
 

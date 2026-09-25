@@ -54,6 +54,7 @@ def main():
     parser.add_argument('--scene', default=None, help='scene name, e.g. scene-0916; default: pick the longest')
     parser.add_argument('--out', required=True, help='output bag directory (without .db3 suffix)')
     parser.add_argument('--lidar-decim', type=int, default=1, help='take every Nth lidar sweep')
+    parser.add_argument('--start-skip', type=int, default=0, help='skip the first N lidar sweeps (e.g. to start after the initial turn)')
     parser.add_argument('--datum-lat', type=float, default=42.345, help='datum latitude for pos->latlon synthesis (Boston Seaport)')
     parser.add_argument('--datum-lon', type=float, default=-71.06, help='datum longitude')
     args = parser.parse_args()
@@ -109,6 +110,9 @@ def main():
           f'duration {(lidar_sweeps[-1]["timestamp"] - lidar_sweeps[0]["timestamp"]) / 1e6:.1f} s')
 
     lidar_sweeps = lidar_sweeps[::args.lidar_decim]
+    if args.start_skip > 0:
+        print(f'skipping first {args.start_skip} sweeps (start-mid-turn bootstrap)')
+        lidar_sweeps = lidar_sweeps[args.start_skip:]
 
     log = log_by_token[scene['log_token']]
     print(f'log: {log["logfile"]}, location: {log["location"]}')
@@ -241,6 +245,28 @@ def main():
 
     t_start_us = lidar_sweeps[0]['timestamp']
     t_end_us = lidar_sweeps[-1]['timestamp']
+
+    # prepend a stationary IMU initialization window (1.5 s, zero gyro, gravity-only accel).
+    # FAST-LIO (and any LIO) estimates gyro bias from the init window assuming the vehicle
+    # is at standstill; nuScenes scenes start mid-drive (scene-1077 enters at 26.8 deg/s
+    # yaw rate), which otherwise gets baked in as a false bias -> -24 deg/s odometry spin.
+    init_dur = 1.5
+    init_dt = 0.02
+    n_static = int(init_dur / init_dt)
+    for k in range(n_static):
+        t_us = t_start_us - (n_static - k) * init_dt * 1e6
+        msg = Imu()
+        msg.header.frame_id = 'base_link'
+        msg.header.stamp = us2time(t_us)
+        msg.angular_velocity.x = 0.0
+        msg.angular_velocity.y = 0.0
+        msg.angular_velocity.z = 0.0
+        msg.linear_acceleration.x = 0.0
+        msg.linear_acceleration.y = 0.0
+        msg.linear_acceleration.z = 9.5   # gravity-only proper accel, matches can_bus convention
+        msg.orientation.w = 1.0
+        writer.write('/imu/data', serialize_message(msg), int(t_us * 1000))
+        n_imu += 1
 
     # imu @ pose channel rate
     for i, t in enumerate(pose_uts):

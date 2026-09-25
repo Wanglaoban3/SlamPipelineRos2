@@ -11,12 +11,12 @@ rm -rf $REC
 source /root/ws/install/setup.bash
 
 echo ">>> starting mapping nodes"
-ros2 launch /mnt/h/projects/slam-pipeline-ros2/launch/mapping.launch.py &
+ros2 launch ${LAUNCH_FILE:-/mnt/h/projects/slam-pipeline-ros2/launch/mapping.launch.py} &
 LAUNCH_PID=$!
 sleep 5
 
-echo ">>> recording /Odometry"
-ros2 bag record -o $REC /Odometry &
+echo ">>> recording ${ODOM_TOPIC:-/odom} /odom_gt"
+ros2 bag record -o $REC ${ODOM_TOPIC:-/odom} /odom_gt &
 REC_PID=$!
 sleep 1
 
@@ -31,14 +31,14 @@ ros2 service call /hdl_graph_slam/save_map hdl_graph_slam_ros2/srv/SaveMap "{utm
 sleep 2
 
 echo ">>> stopping"
-kill -INT $LAUNCH_PID 2>/dev/null || true
-sleep 5
-# map was already saved via the service call above -> hard stop is safe
+# stop the recorder FIRST with SIGINT so it finalizes metadata.yaml, then hard-kill the rest
+kill -INT $REC_PID 2>/dev/null || true
+sleep 3
 kill -9 $LAUNCH_PID $REC_PID 2>/dev/null || true
 pkill -9 -x hdl_graph_slam_node 2>/dev/null || true
 pkill -9 -x prefiltering_node 2>/dev/null || true
 pkill -9 -x floor_detection_node 2>/dev/null || true
-pkill -9 -x fastlio_mapping 2>/dev/null || true
+pkill -9 -x scan_matching_odometry_node 2>/dev/null || true
 wait 2>/dev/null || true
 echo ">>> mapping stage done"
 ls -la /root/data/globalmap.pcd || echo "WARNING: globalmap.pcd missing"

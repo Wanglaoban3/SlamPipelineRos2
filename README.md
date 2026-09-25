@@ -28,7 +28,11 @@
                                        └──────────────────────────┘
 ```
 
-> 注：hdl_graph_slam 自带的 scan_matching_odometry 节点（已一并移植，在本工作区可独立运行）被 FAST-LIO2 作为里程计来源替代——这也是更贴近量产的架构：滤波前端供高频里程计，图优化后端只负责建图与回环。
+> 注：前端按**数据频率**选择（对比实验见 results/report.md）：
+> - **10-20Hz 雷达 + 原始 IMU**（61.bag sweeps）：用 FAST-LIO2 前端（mapping_fastlio_test.launch.py），ATE 0.112m，比 ICP 好 5 倍；
+> - **2Hz 稀疏关键帧**（nuScenes-mini）：必须用几何 ICP 前端（mapping.launch.py，默认）——FAST-LIO2 在 6.3m/帧的跳变下会发散（转弯自旋/直行冻结，机制见报告）。
+>
+> 已验证的关键工程点：雷达时间戳是"扫完时刻"，需前移一个扫掠周期对齐 FAST-LIO 的去畸变窗口（否则转弯残影 ~2°）；nuScenes 扫描含空中幽灵回波，需按仰角一致性过滤；LIO 初始化假设载体静止（bag 前置 1.5s 静止 IMU 窗口）；图节点用"最近时间配对"替代 message_filters 并在启动时打印订阅话题名。
 
 ## 目录结构
 

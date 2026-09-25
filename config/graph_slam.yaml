@@ -18,7 +18,11 @@
         base_link_frame: "base_link"
 
         # ---------------- odometry source ----------------
-        # FAST-LIO2 provides /Odometry (front-end); hdl_graph_slam consumes it for the pose graph
+        # scan_matching_odometry_node (ICP) publishes /odom; hdl_graph_slam consumes it for the pose graph.
+        # NOTE: FAST-LIO2 diverges on nuScenes-mini's 2Hz lidar (6.3 m inter-frame motion): starting from
+        # a turn it spins (-419 deg vs GT 4.8 deg); starting on a straight section the scan matching is
+        # translation-degenerate and the estimate freezes (1.8 m vs 170 m). Both are outside its
+        # 10-20 Hz design envelope. Use the geometric ICP front-end for this data.
         published_odom_topic: "/Odometry"
         odom_frame_id: "odom"
         robot_odom_frame_id: "robot_odom"
@@ -30,16 +34,16 @@
         max_acceptable_trans: 2.0
         max_acceptable_angle: 1.0
 
-        registration_method: "NDT_OMP"
+        registration_method: "ICP"
         reg_num_threads: 0
         reg_transformation_epsilon: 0.01
-        reg_maximum_iterations: 64
-        reg_resolution: 0.75
-        reg_nn_search_method: "DIRECT7"
+        reg_maximum_iterations: 100
+        reg_max_correspondence_distance: 10.0   # 2Hz data: ~6.3m inter-frame displacement
+        reg_use_reciprocal_correspondences: false
 
         # ---------------- floor detection ----------------
         tilt_deg: 0.0
-        sensor_height: 0.0          # clouds arrive in base_link: ground plane is at z ~ 0
+        sensor_height: -1.84        # clouds in base_link: ground plane is 1.84 m below (lidar height)
         height_clip_range: 1.0
         floor_pts_thresh: 256
         floor_normal_thresh: 15.0
@@ -60,8 +64,8 @@
         fix_first_node_stddev: "1 1 1 1 1 1"
         fix_first_node_adaptive: true
 
-        # GPS factor (NavSatFix from nuScenes can_bus RT3000)
-        enable_gps: true
+        # GPS factor (disabled: isolate pure-ICP mapping quality)
+        enable_gps: false
         gps_navsat_topic: "/gps/fix"
         gps_time_offset: 0.0
         gps_edge_stddev_xy: 3.0
